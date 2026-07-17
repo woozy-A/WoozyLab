@@ -3,81 +3,63 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>GlassLingo Privacy Policy</title>
-  <style>
-    :root {
-      color-scheme: light dark;
-      --accent: #7a8cff;
-      --text: #1d1d1f;
-      --muted: #6e6e73;
-      --bg: #f5f7fb;
-      --card: #ffffff;
-      --border: #d8e5ff;
-    }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --text: #f5f5f7;
-        --muted: #a1a1a6;
-        --bg: #101318;
-        --card: #1c1f24;
-        --border: #27364d;
-      }
-    }
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.65;
-    }
-    main {
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 48px 20px;
-    }
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 28px;
-    }
-    h1, h2 {
-      margin-top: 0;
-      letter-spacing: 0;
-    }
-    p, li {
-      color: var(--muted);
-    }
-    a {
-      color: var(--accent);
-      font-weight: 600;
-      text-decoration: none;
-    }
-    .section {
-      margin-top: 28px;
-      padding-top: 22px;
-      border-top: 1px solid var(--border);
-    }
-  </style>
+  <title>GlassLingo Privacy Policy | WoozyLab</title>
+  <meta name="description" content="GlassLingo 개인정보 처리방침입니다.">
+  <link rel="stylesheet" href="../../assets/css/site.css">
 </head>
-<body>
-  <main>
-    <section class="card">
-      <h1>GlassLingo Privacy Policy</h1>
-      <p>Last updated: June 10, 2026</p>
-
-      <h2>개인정보 처리방침</h2>
-      <p>GlassLingo는 기본 모드에서 서버 계정이나 외부 번역 API 없이, 사용자가 렌즈로 지정한 화면 영역을 기기에서 처리하는 것을 우선합니다.</p>
-      <p>개인정보 관련 문의는 이메일로 연락해 주세요.</p>
-      <p><a href="mailto:ycw012@naver.com">ycw012@naver.com</a></p>
-
-      <div class="section">
-        <h2>Privacy Policy</h2>
-        <p>GlassLingo prioritizes on-device processing for the selected lens area and does not require an account or external translation API in the basic mode.</p>
+<body class="site-page theme-glasslingo">
+  <header class="site-header">
+    <nav class="site-nav" aria-label="주요 메뉴">
+      <a class="site-brand" href="../../">WoozyLab</a>
+      <div class="site-nav-links">
+        <a href="../">GlassLingo</a>
+        <a href="../support/">Support</a>
+        <a href="./" aria-current="page">Privacy</a>
       </div>
+    </nav>
+  </header>
 
-      <p class="section"><a href="../">Back to GlassLingo</a></p>
-    </section>
+  <main class="document-shell">
+    <article class="document-surface">
+      <div class="document-hero">
+        <img class="document-icon" src="../../assets/glasslingo-icon.png" width="512" height="512" alt="GlassLingo 앱 아이콘">
+        <h1>GlassLingo Privacy Policy</h1>
+      </div>
+      <p lang="en">Last updated: <time datetime="2026-06-10">June 10, 2026</time></p>
+
+      <section class="content-section" aria-labelledby="glasslingo-privacy-ko">
+        <h2 id="glasslingo-privacy-ko">개인정보 처리방침</h2>
+        <p>GlassLingo는 기본 모드에서 서버 계정이나 외부 번역 API 없이, 사용자가 렌즈로 지정한 화면 영역을 기기에서 처리하는 것을 우선합니다.</p>
+        <ul class="policy-list">
+          <li>기본 모드는 별도 서버, 계정, 데이터베이스 없이 동작하는 방향을 우선합니다.</li>
+          <li>번역을 위해 렌즈 영역의 화면 이미지만 읽으며, 전체 화면 번역 앱이 아닙니다.</li>
+          <li>무료 기본 버전은 외부 번역 API 또는 LLM API를 사용하지 않습니다.</li>
+          <li>향후 고급 번역 기능이 추가될 경우, 데이터 처리 방식과 개인정보 정책을 별도로 안내합니다.</li>
+        </ul>
+        <p>개인정보 관련 문의는 이메일로 연락해 주세요.</p>
+        <p><a href="mailto:ycw012@naver.com">ycw012@naver.com</a></p>
+      </section>
+
+      <section class="content-section" lang="en" aria-labelledby="glasslingo-privacy-en">
+        <h2 id="glasslingo-privacy-en">Privacy Policy</h2>
+        <p>GlassLingo prioritizes on-device processing for the selected lens area and does not require an account or external translation API in the basic mode.</p>
+      </section>
+
+      <nav class="content-section action-links" aria-label="GlassLingo 관련 링크">
+        <a href="../">Back to GlassLingo</a>
+        <a href="../support/">Support</a>
+      </nav>
+    </article>
   </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>© 2026 WoozyLab</p>
+      <nav class="footer-links" aria-label="푸터 메뉴">
+        <a href="../../support/">Support</a>
+        <a href="../../privacy/">All Privacy Policies</a>
+      </nav>
+    </div>
+  </footer>
 </body>
 </html>

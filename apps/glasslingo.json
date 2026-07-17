@@ -1,0 +1,59 @@
+{
+  "$schema": "../schema/app.schema.json",
+  "slug": "glasslingo",
+  "name": "GlassLingo",
+  "status": null,
+  "platform": "macOS",
+  "tagline": "부분만 번역하는 맥용 렌즈",
+  "summary": "GlassLingo는 화면 위 필요한 부분만 빠르게 이해할 수 있도록 돕는 macOS 부분 번역 렌즈입니다.",
+  "appStoreURL": null,
+  "supportEmail": "ycw012@naver.com",
+  "marketingURL": "https://woozy-A.github.io/WoozyLab/glasslingo/",
+  "supportURL": "https://woozy-A.github.io/WoozyLab/glasslingo/support/",
+  "privacyURL": "https://woozy-A.github.io/WoozyLab/glasslingo/privacy/",
+  "permissions": [
+    {
+      "name": "화면 기록",
+      "purpose": "GlassLingo는 화면 일부를 읽어야 하므로 macOS의 화면 기록 권한이 필요합니다.",
+      "required": true
+    }
+  ],
+  "privacyFacts": [
+    "기본 모드는 별도 서버, 계정, 데이터베이스 없이 동작하는 방향을 우선합니다.",
+    "번역을 위해 렌즈 영역의 화면 이미지만 읽으며, 전체 화면 번역 앱이 아닙니다.",
+    "무료 기본 버전은 외부 번역 API 또는 LLM API를 사용하지 않습니다.",
+    "향후 고급 번역 기능이 추가될 경우, 데이터 처리 방식과 개인정보 정책을 별도로 안내합니다."
+  ],
+  "features": [
+    {
+      "title": "부분 번역",
+      "description": "렌즈를 필요한 화면 영역에 맞추면 그 부분만 번역합니다. 전체 페이지 번역을 켰다 끄는 번거로움을 줄입니다."
+    },
+    {
+      "title": "복사 불가능한 영역",
+      "description": "선택할 수 없는 앱 화면, 이미지, PDF, 영상 속 텍스트도 화면 캡처와 OCR로 읽는 흐름을 사용합니다."
+    },
+    {
+      "title": "온디바이스 우선",
+      "description": "기본 번역 흐름은 Apple Vision OCR과 Apple 번역 기술을 우선하며, 별도 서버나 외부 번역 API를 사용하지 않습니다."
+    }
+  ],
+  "screenshots": [],
+  "accentColor": null,
+  "icon": "assets/glasslingo-icon.png",
+  "privacyPolicyUpdatedAt": "2026-06-10",
+  "updatedAt": "2026-07-18",
+  "sourceFiles": [
+    "index.html",
+    "glasslingo/index.html",
+    "glasslingo/support/index.html",
+    "glasslingo/privacy/index.html",
+    "README.md"
+  ],
+  "todos": [
+    "현재 페이지의 준비 중 표현을 기준으로 실제 출시 상태를 앱 소유자가 확인해야 합니다.",
+    "App Store 공개 URL을 출시 후 확인해야 합니다.",
+    "제품 소개와 지원/개인정보 페이지에 서로 다른 강조색이 있어 단일 accentColor를 확인해야 합니다.",
+    "기본 모드와 무료 기본 버전의 개인정보 조건이 현재 앱 동작과 일치하는지 출시 전에 다시 확인해야 합니다."
+  ]
+}

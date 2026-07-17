@@ -1,0 +1,45 @@
+{
+  "$schema": "../schema/app.schema.json",
+  "slug": "keypic",
+  "name": "KeyPic",
+  "status": "출시 준비 중",
+  "platform": "macOS",
+  "tagline": null,
+  "summary": "키보드 단축키로 많은 사진을 빠르게 검수하고 폴더별로 정리하는 macOS 앱입니다.",
+  "appStoreURL": null,
+  "supportEmail": "ycw012@naver.com",
+  "marketingURL": "https://woozy-A.github.io/WoozyLab/keypic/",
+  "supportURL": "https://woozy-A.github.io/WoozyLab/keypic/support/",
+  "privacyURL": "https://woozy-A.github.io/WoozyLab/keypic/privacy/",
+  "permissions": null,
+  "privacyFacts": [
+    "KeyPic은 개인정보를 수집하지 않습니다.",
+    "KeyPic은 사용자가 선택한 Mac의 로컬 폴더 안에서 사진을 처리합니다.",
+    "사진은 서버로 업로드되지 않습니다.",
+    "로그인 계정은 필요하지 않습니다.",
+    "분석 도구, 광고 추적기, 제3자 데이터 수집 SDK를 사용하지 않습니다."
+  ],
+  "features": [
+    {
+      "title": "사진 검수와 폴더 정리",
+      "description": "키보드 단축키로 많은 사진을 빠르게 검수하고 폴더별로 정리합니다."
+    }
+  ],
+  "screenshots": [],
+  "accentColor": "#007AFF",
+  "icon": "assets/keypic-logo.png",
+  "privacyPolicyUpdatedAt": "2026-06-09",
+  "updatedAt": "2026-07-18",
+  "sourceFiles": [
+    "index.html",
+    "keypic/index.html",
+    "keypic/support/index.html",
+    "keypic/privacy/index.html",
+    "README.md"
+  ],
+  "todos": [
+    "App Store 공개 URL을 출시 후 확인해야 합니다.",
+    "별도 tagline 문구를 앱 소유자가 확인해야 합니다.",
+    "사용자가 선택한 로컬 폴더 처리에 필요한 정확한 macOS 권한 이름과 사용 목적을 확인해야 합니다."
+  ]
+}

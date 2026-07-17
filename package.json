@@ -1,0 +1,17 @@
+{
+  "name": "woozylab-site",
+  "private": true,
+  "version": "1.0.0",
+  "description": "WoozyLab static site validation tools",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "validate:schema": "node scripts/validate-schema.mjs",
+    "validate:site": "node scripts/validate-site.mjs",
+    "validate": "npm run validate:schema && npm run validate:site"
+  },
+  "devDependencies": {
+    "ajv": "8.20.0"
+  }
+}
