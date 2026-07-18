@@ -12,19 +12,20 @@
 |---|---:|---:|
 | 공개 HTML | 9개 | 9개, 기존 경로 유지 |
 | 외부 CSS | 0개 | 공통 `assets/css/site.css` 1개 |
-| 이미지 | PNG 2개 | 기존 PNG 2개 유지 |
+| 이미지 | PNG 2개 | 기존 PNG 2개 유지, 밥픽 Web Lab 미리보기 JPG 1개 추가 |
 | 구조화된 앱 데이터 | 없음 | `apps/keypic.json`, `apps/glasslingo.json` |
 | 데이터 검증 규칙 | 없음 | `schema/app.schema.json`과 npm 검증 스크립트 |
 | 운영 기준 문서 | 간단한 README만 존재 | `SITE_RULES.md`, `SITE_AUDIT.md`, 보강된 README |
 
 작업 전 9개 HTML 모두 자체 `<style>` 또는 인라인 스타일을 포함했다. 정리 후 루트·허브·앱 지원/개인정보 페이지는 공통 CSS를 사용한다. GlassLingo 소개 페이지의 고유한 렌즈 디자인 CSS는 사용자-facing 디자인을 크게 바꾸지 않기 위해 페이지 안에 유지하고, 공통 CSS의 컴포넌트 선택자가 침범하지 않도록 범위를 제한했다.
 
-이미지는 다음 두 파일뿐이며 파일 형식과 실제 크기를 확인했다.
+배포 이미지는 다음 세 파일이며 파일 형식과 실제 크기를 확인했다.
 
 | 파일 | 형식 | 크기 | 상태 |
 |---|---|---:|---|
 | `assets/keypic-logo.png` | PNG RGBA | 1024 × 1024 | 유지 |
 | `assets/glasslingo-icon.png` | PNG RGB | 512 × 512 | 유지 |
+| `assets/babpick-preview.jpg` | JPEG RGB | 1280 × 720 | 밥픽 공개 화면 미리보기 |
 
 ## 2. 발견 문제와 처리 결과
 
@@ -57,7 +58,7 @@ GlassLingo 정책의 `기본 모드`, `방향을 우선`, `무료 기본 버전`
 
 | 공개 경로 | 저장소 파일 | 결과 |
 |---|---|---|
-| `/` | `index.html` | 유지, WoozyLab 앱 목록 |
+| `/` | `index.html` | 유지, WoozyLab 앱 목록과 Web Labs 링크 |
 | `/support/` | `support/index.html` | 유지, 앱 선택 허브 |
 | `/privacy/` | `privacy/index.html` | 유지, 앱 선택 허브 |
 | `/keypic/` | `keypic/index.html` | 유지 |
@@ -85,8 +86,8 @@ TODO는 사실 확인 전까지 임의로 채우지 않는다. Schema가 `null`�
 |---|---|
 | JSON Schema | 앱 JSON 2개 통과 |
 | 누락·오류 guard | 필수 필드 4개, 날짜 1개, 이미지 경로 3개 통과 |
-| 사이트 검사 | HTML 9개, 참조 124개, 실패 사례 10개 통과 |
-| 데스크톱·모바일 | 9개 경로 × 1440/390/320px = 27개 조합 통과 |
+| 사이트 검사 | HTML 9개, 참조 127개, 실패 사례 10개 통과 |
+| 데스크톱·모바일 | 기존 9개 경로 × 1440/390/320px 통과, 루트 Web Labs 카드 1280/390px 추가 확인 |
 | 이미지·CSS 로딩 | 깨진 이미지와 미로딩 stylesheet 0개 |
 | 레이아웃 | 가로 overflow 0개, 각 페이지 H1 1개 |
 | Git 형식 검사 | `git diff --check` 통과 |

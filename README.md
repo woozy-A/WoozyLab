@@ -5,6 +5,7 @@ WoozyLab 앱의 제품 소개, 고객지원, 개인정보 처리방침을 제공
 ## 공개 사이트
 
 - WoozyLab: https://woozy-A.github.io/WoozyLab/
+- 밥픽 Web Lab: https://woozy-a.github.io/lunch-picker/
 - Support Hub: https://woozy-A.github.io/WoozyLab/support/
 - Privacy Hub: https://woozy-A.github.io/WoozyLab/privacy/
 - KeyPic: https://woozy-A.github.io/WoozyLab/keypic/
@@ -26,7 +27,7 @@ schema/
   app.schema.json           앱 데이터 JSON Schema
 assets/
   css/site.css              공통 스타일과 반응형 규칙
-  ...                       앱 아이콘과 스크린샷
+  ...                       앱 아이콘과 앱·Web Lab 미리보기
 scripts/
   validate-schema.mjs       앱 JSON Schema 검사
   validate-site.mjs         내부 링크, 이미지, 공개 경로 검사
