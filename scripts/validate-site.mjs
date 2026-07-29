@@ -315,11 +315,53 @@ const requiredPublicFiles = [
   "keypic/privacy/index.html",
   "glasslingo/index.html",
   "glasslingo/support/index.html",
-  "glasslingo/privacy/index.html"
+  "glasslingo/privacy/index.html",
+  "en/index.html",
+  "en/support/index.html",
+  "en/privacy/index.html",
+  "en/keypic/index.html",
+  "en/keypic/support/index.html",
+  "en/keypic/privacy/index.html"
 ];
 
 for (const publicFile of requiredPublicFiles) {
   if (!await exists(path.join(root, publicFile))) errors.push(`필수 공개 URL 파일이 없습니다: ${publicFile}`);
+}
+
+const localizedPagePairs = [
+  ["index.html", "en/index.html"],
+  ["support/index.html", "en/support/index.html"],
+  ["privacy/index.html", "en/privacy/index.html"],
+  ["keypic/index.html", "en/keypic/index.html"],
+  ["keypic/support/index.html", "en/keypic/support/index.html"],
+  ["keypic/privacy/index.html", "en/keypic/privacy/index.html"]
+];
+
+for (const [koreanPath, englishPath] of localizedPagePairs) {
+  const koreanFile = path.join(root, koreanPath);
+  const englishFile = path.join(root, englishPath);
+
+  if (!await exists(koreanFile) || !await exists(englishFile)) continue;
+
+  const [koreanHtml, englishHtml, koreanTargets, englishTargets] = await Promise.all([
+    readFile(koreanFile, "utf8"),
+    readFile(englishFile, "utf8"),
+    localHrefTargets(koreanFile),
+    localHrefTargets(englishFile)
+  ]);
+
+  if (!/<html\s+lang=["']ko["']/.test(koreanHtml)) {
+    errors.push(`${display(koreanFile)}: 한국어 페이지의 html lang이 ko가 아닙니다.`);
+  }
+  if (!/<html\s+lang=["']en["']/.test(englishHtml)) {
+    errors.push(`${display(englishFile)}: 영어 페이지의 html lang이 en이 아닙니다.`);
+  }
+  if (!koreanTargets.has(englishFile)) {
+    errors.push(`${display(koreanFile)}: 대응 영어 페이지 링크가 없습니다 (${display(englishFile)}).`);
+  }
+  if (!englishTargets.has(koreanFile)) {
+    errors.push(`${display(englishFile)}: 대응 한국어 페이지 링크가 없습니다 (${display(koreanFile)}).`);
+  }
 }
 
 if (errors.length > 0) {
@@ -328,4 +370,4 @@ if (errors.length > 0) {
   process.exit(1);
 }
 
-console.log(`Site validation passed: ${htmlFiles.length} HTML files, ${appFiles.length} app data files, ${checkedReferences} references, and ${internalGuardCount} negative guards checked.`);
+console.log(`Site validation passed: ${htmlFiles.length} HTML files, ${appFiles.length} app data files, ${checkedReferences} references, ${localizedPagePairs.length} localized page pairs, and ${internalGuardCount} negative guards checked.`);

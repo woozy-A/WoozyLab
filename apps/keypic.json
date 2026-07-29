@@ -2,7 +2,7 @@
   "$schema": "../schema/app.schema.json",
   "slug": "keypic",
   "name": "KeyPic",
-  "status": "출시 준비 중",
+  "status": "출시됨",
   "platform": "macOS",
   "tagline": null,
   "summary": "키보드 단축키로 많은 사진을 빠르게 검수하고 폴더별로 정리하는 macOS 앱입니다.",
@@ -29,12 +29,16 @@
   "accentColor": "#007AFF",
   "icon": "assets/keypic-logo.png",
   "privacyPolicyUpdatedAt": "2026-06-09",
-  "updatedAt": "2026-07-18",
+  "updatedAt": "2026-07-29",
   "sourceFiles": [
     "index.html",
+    "en/index.html",
     "keypic/index.html",
     "keypic/support/index.html",
     "keypic/privacy/index.html",
+    "en/keypic/index.html",
+    "en/keypic/support/index.html",
+    "en/keypic/privacy/index.html",
     "README.md"
   ],
   "todos": [

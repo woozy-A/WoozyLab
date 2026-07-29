@@ -11,6 +11,10 @@ WoozyLab 앱의 제품 소개, 고객지원, 개인정보 처리방침을 제공
 - KeyPic: https://woozy-A.github.io/WoozyLab/keypic/
 - KeyPic Support: https://woozy-A.github.io/WoozyLab/keypic/support/
 - KeyPic Privacy Policy: https://woozy-A.github.io/WoozyLab/keypic/privacy/
+- English Home: https://woozy-A.github.io/WoozyLab/en/
+- KeyPic (English): https://woozy-A.github.io/WoozyLab/en/keypic/
+- KeyPic Support (English): https://woozy-A.github.io/WoozyLab/en/keypic/support/
+- KeyPic Privacy Policy (English): https://woozy-A.github.io/WoozyLab/en/keypic/privacy/
 - GlassLingo: https://woozy-A.github.io/WoozyLab/glasslingo/
 - GlassLingo Support: https://woozy-A.github.io/WoozyLab/glasslingo/support/
 - GlassLingo Privacy Policy: https://woozy-A.github.io/WoozyLab/glasslingo/privacy/
@@ -35,6 +39,11 @@ scripts/
   index.html                제품 소개
   support/index.html        고객지원
   privacy/index.html        개인정보 처리방침
+en/
+  index.html                영어 WoozyLab 홈
+  support/index.html        영어 고객지원 허브
+  privacy/index.html        영어 개인정보 허브
+  {app}/                    영어 앱 소개·지원·개인정보 페이지
 SITE_RULES.md               사이트 운영과 AI 작업의 최상위 규칙
 SITE_AUDIT.md               구조 점검 결과와 남은 확인 항목
 ```
@@ -59,7 +68,8 @@ npm run validate
 - 앱 URL이 정확한 GitHub Pages 도메인·slug·소개/지원/개인정보 경로인지
 - 앱 이름, 요약, 지원 이메일, 개인정보 사실, 권한 목적이 해당 HTML과 일치하는지
 - 모든 앱이 루트·Support·Privacy 허브에 등록되어 있는지
-- 현재 공개 URL에 해당하는 9개 `index.html`이 유지되는지
+- 현재 공개 URL과 KeyPic 영어 URL에 해당하는 15개 `index.html`이 유지되는지
+- 한국어·영어 페이지가 서로 대응하는 언어 전환 링크를 제공하는지
 
 ## 새 앱 추가
 
