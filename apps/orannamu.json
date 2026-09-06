@@ -1,0 +1,40 @@
+{
+  "$schema": "../schema/app.schema.json",
+  "slug": "orannamu",
+  "name": "오랜나무",
+  "status": "출시 준비",
+  "platform": "iPhone · iPad",
+  "tagline": "나무를 따라, 장소의 시간을 읽다",
+  "summary": "전국의 오래된 나무를 지도에서 찾고, 나무가 바라본 장소의 시간을 이야기와 사진으로 만나는 앱입니다.",
+  "appStoreURL": null,
+  "supportEmail": "ckddn8383@gmail.com",
+  "marketingURL": "https://woozy-a.github.io/WoozyLab/orannamu/",
+  "supportURL": "https://woozy-a.github.io/WoozyLab/orannamu/support/",
+  "privacyURL": "https://woozy-a.github.io/WoozyLab/orannamu/privacy/",
+  "permissions": null,
+  "privacyFacts": [
+    "오랜나무는 전국의 오래된 나무와 장소의 시간을 탐색하는 앱입니다. 광고 추적이나 개인정보 판매를 하지 않습니다. 온라인 사진 기록을 사용할 때만 익명 계정과 사진 제출 정보가 Supabase에 저장됩니다.",
+    "정확한 GPS 좌표나 이동 경로는 공개 DB에 저장하지 않습니다. 승인 사진은 EXIF·GPS·촬영자 이름 등 이미지 메타데이터를 제거한 사본만 공개합니다.",
+    "계정 삭제는 익명 인증 계정과 사용자가 제출한 서버 사진·관련 행을 삭제합니다. 기기에만 저장된 나무·만남 기록은 삭제하지 않습니다."
+  ],
+  "features": [
+    {"title": "지도에서 발견하기", "description": "전국 보호수와 천연기념물의 위치와 기록을 살펴보고, 다시 보고 싶은 나무를 저장합니다."},
+    {"title": "장소의 시간 읽기", "description": "네 그루의 나무를 따라 시대별 이야기를 만납니다. 과거 장면은 실제 역사 사진이 아닌 편집 재구성 이미지로 구분해 안내합니다."},
+    {"title": "사진으로 기록 잇기", "description": "사진과 촬영 시기를 등록하면 관리자 확인 뒤 나무의 공개 기록에 더해집니다. 내 사진과 온라인 계정은 앱에서 삭제할 수 있습니다."}
+  ],
+  "screenshots": [
+    {"path": "assets/screenshots/orannamu/home.png", "alt": "오랜나무 홈에서 나무별 시간 이야기를 탐색하는 앱 화면"},
+    {"path": "assets/screenshots/orannamu/story.png", "alt": "1602년 서울 문묘의 재건을 안내하는 시간 이야기 화면. 편집 재구성 이미지이며 실제 당시 사진이 아닙니다."}
+  ],
+  "accentColor": "#304B3D",
+  "icon": "assets/orannamu-icon.png",
+  "privacyPolicyUpdatedAt": "2026-09-06",
+  "updatedAt": "2026-09-06",
+  "sourceFiles": ["content/documents.json", "content/document-provenance.json", "content/ORANNAMU_SOURCES.md", "orannamu/index.html", "orannamu/support/index.html", "orannamu/privacy/index.html"],
+  "todos": [
+    "App Store 공개 URL은 출시 후 확인해 추가한다.",
+    "권한별 명칭과 선택 조건은 앱 출시 검토에서 확인 후 구조화한다. 기존 정책 본문은 유지한다.",
+    "앱 내 지원·정책 주소는 기존 WitnessTree-Legal을 유지 중이다. 새 사이트 공개 확인 후 앱 저장소의 별도 변경으로 연결한다.",
+    "영어 상세 페이지는 번역 및 사실 검토 후 추가한다."
+  ]
+}

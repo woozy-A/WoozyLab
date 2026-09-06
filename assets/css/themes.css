@@ -1,0 +1,10 @@
+/* 앱의 개성만 이 파일에서 바꾼다. 메뉴, 본문 폭, 버튼 동작은 공통 스타일을 따른다. */
+.theme-keypic { --accent:#0066cc; --soft:#eaf3ff; }
+.theme-glasslingo { --accent:#006e69; --soft:#e7f3f2; }
+.theme-orannamu { --accent:#304b3d; --soft:#edf1e9; }
+.theme-orannamu .product-hero h1 { max-width: 11em; }
+@media (prefers-color-scheme: dark) {
+  .theme-keypic { --accent:#96c3ff; --soft:#20364e; }
+  .theme-glasslingo { --accent:#83d7ce; --soft:#1d3836; }
+  .theme-orannamu { --accent:#a9c8ad; --soft:#25382d; }
+}

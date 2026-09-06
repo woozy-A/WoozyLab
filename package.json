@@ -7,9 +7,12 @@
     "node": ">=18"
   },
   "scripts": {
+    "build": "node scripts/build-site.mjs",
+    "check:generated": "node scripts/build-site.mjs --check",
+    "test": "node --test scripts/site.test.mjs",
     "validate:schema": "node scripts/validate-schema.mjs",
     "validate:site": "node scripts/validate-site.mjs",
-    "validate": "npm run validate:schema && npm run validate:site"
+    "validate": "npm run validate:schema && npm run check:generated && npm run validate:site && npm test"
   },
   "devDependencies": {
     "ajv": "8.20.0"

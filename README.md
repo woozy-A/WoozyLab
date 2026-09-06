@@ -23,6 +23,25 @@ WoozyLab 앱의 제품 소개, 고객지원, 개인정보 처리방침을 제공
 
 ## 관리 구조
 
+**HTML은 생성 결과입니다. 페이지마다 메뉴를 직접 고치지 마세요.**
+세 앱과 18개 공개 페이지가 같은 레이아웃을 사용합니다. 앱마다 다른 것은 아이콘·색·내용이고, 메뉴·푸터·지원 문서의 읽기 방식은 같습니다.
+
+| 바꾸려는 것 | 수정할 곳 |
+|---|---|
+| 앱 이름·상태·링크·기능 | `apps/{slug}.json` |
+| 앱 순서·대표 연락처·홈 소개·Web Labs | `content/site.json` |
+| 지원·개인정보 본문 | `content/documents.json` (승인된 사실만) |
+| 모든 페이지의 메뉴·푸터 | `scripts/lib/layout.mjs` |
+| 소개·목록·문서의 공통 구성 | `scripts/lib/pages.mjs` |
+| 크기·간격·글꼴·반응형 | `assets/css/site.css` |
+| 앱별 강조색·제한된 고유 스타일 | `assets/css/themes.css` |
+
+수정 후 `npm run build` → `npm run validate`. HTML만 수정하면 생성 일치 검사가 실패합니다.
+지원·정책 본문은 이전 공개 문서와 오랜나무 승인 문서에서 그대로 옮겼으며 `content/document-provenance.json`에 원본 근거와 본문 해시가 있습니다. 정책을 의도적으로 개정할 때만 근거·본문·JSON 사실·개정일·해시를 함께 검토합니다.
+
+오랜나무 새 경로: `/orannamu/`, `/orannamu/support/`, `/orannamu/privacy/`.
+앱 내 기존 WitnessTree-Legal 링크와 별도 사이트는 이번 사이트 작업에서 수정하지 않습니다.
+
 ```text
 apps/                       앱별 기준 데이터
   keypic.json
@@ -31,8 +50,12 @@ schema/
   app.schema.json           앱 데이터 JSON Schema
 assets/
   css/site.css              공통 스타일과 반응형 규칙
+  css/themes.css            앱별 개성
   ...                       앱 아이콘과 앱·Web Lab 미리보기
 scripts/
+  build-site.mjs            공통 틀로 18개 HTML 생성
+  lib/                     공통 레이아웃과 페이지 구성
+  site.test.mjs             문구 보존·메뉴·URL 회귀 검사
   validate-schema.mjs       앱 JSON Schema 검사
   validate-site.mjs         내부 링크, 이미지, 공개 경로 검사
 {app}/
@@ -55,7 +78,8 @@ SITE_AUDIT.md               구조 점검 결과와 남은 확인 항목
 Node.js 18 이상과 npm이 필요합니다.
 
 ```sh
-npm install
+npm ci
+npm run build
 npm run validate
 ```
 
@@ -68,15 +92,17 @@ npm run validate
 - 앱 URL이 정확한 GitHub Pages 도메인·slug·소개/지원/개인정보 경로인지
 - 앱 이름, 요약, 지원 이메일, 개인정보 사실, 권한 목적이 해당 HTML과 일치하는지
 - 모든 앱이 루트·Support·Privacy 허브에 등록되어 있는지
-- 현재 공개 URL과 KeyPic 영어 URL에 해당하는 15개 `index.html`이 유지되는지
+- 기존 15개 공개 URL과 새 오랜나무 3개 URL이 유지되는지
+- 모든 HTML이 공통 틀의 최신 생성 결과인지
+- 기존 지원·개인정보 본문과 연락처가 보존되는지
 - 한국어·영어 페이지가 서로 대응하는 언어 전환 링크를 제공하는지
 
 ## 새 앱 추가
 
 1. `apps/new-app.json` 작성
 2. 아이콘과 스크린샷 추가
-3. `new-app/`, `new-app/support/`, `new-app/privacy/` 페이지 생성
-4. 루트, Support Hub, Privacy Hub에 링크 추가
+3. `content/documents.json`에 승인된 지원·개인정보 본문과 출처 기록 추가
+4. `content/site.json`의 `appOrder`에 추가하고 `npm run build` (세 페이지와 허브 자동 반영)
 5. `npm run validate` 및 데스크톱·모바일 확인
 6. diff 검토 후 현재 GitHub Pages 배포 기준인 `main` 브랜치 루트에 커밋·푸시
 

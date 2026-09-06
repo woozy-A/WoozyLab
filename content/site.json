@@ -1,0 +1,10 @@
+{
+  "name": "WoozyLab",
+  "contactEmail": "ycw012@naver.com",
+  "appOrder": ["keypic", "glasslingo", "orannamu"],
+  "home": {
+    "ko": {"title": "귀찮음을 줄이는<br>작은 시스템.", "intro": "사진을 정리하고, 화면을 이해하고, 나무가 지나온 시간을 만납니다. 한 사람이 만들고 다듬는 앱과 작은 실험을 모았습니다."},
+    "en": {"title": "Small systems<br>for everyday friction.", "intro": "Apps and small experiments by an independent maker: organizing photos, understanding screens, and exploring the stories of old trees."}
+  },
+  "webLab": {"name": "밥픽", "nameEN": "Babpick", "url": "https://woozy-a.github.io/lunch-picker/", "image": "assets/babpick-preview.jpg", "description": "오늘 상태를 고르면 점심 메뉴를 추천하고, 결정한 메뉴를 점심로그에 남겨주는 웹 도구입니다.", "descriptionEN": "Choose how you feel today, get a lunch suggestion, and save your final choice to a simple lunch log."}
+}

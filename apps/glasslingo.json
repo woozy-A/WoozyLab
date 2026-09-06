@@ -2,7 +2,7 @@
   "$schema": "../schema/app.schema.json",
   "slug": "glasslingo",
   "name": "GlassLingo",
-  "status": null,
+  "status": "출시 준비",
   "platform": "macOS",
   "tagline": "부분만 번역하는 맥용 렌즈",
   "summary": "GlassLingo는 화면 위 필요한 부분만 빠르게 이해할 수 있도록 돕는 macOS 부분 번역 렌즈입니다.",
@@ -39,10 +39,10 @@
     }
   ],
   "screenshots": [],
-  "accentColor": null,
+  "accentColor": "#006E69",
   "icon": "assets/glasslingo-icon.png",
   "privacyPolicyUpdatedAt": "2026-06-10",
-  "updatedAt": "2026-07-18",
+  "updatedAt": "2026-09-06",
   "sourceFiles": [
     "index.html",
     "glasslingo/index.html",
@@ -51,9 +51,7 @@
     "README.md"
   ],
   "todos": [
-    "현재 페이지의 준비 중 표현을 기준으로 실제 출시 상태를 앱 소유자가 확인해야 합니다.",
     "App Store 공개 URL을 출시 후 확인해야 합니다.",
-    "제품 소개와 지원/개인정보 페이지에 서로 다른 강조색이 있어 단일 accentColor를 확인해야 합니다.",
     "기본 모드와 무료 기본 버전의 개인정보 조건이 현재 앱 동작과 일치하는지 출시 전에 다시 확인해야 합니다."
   ]
 }

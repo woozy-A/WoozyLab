@@ -1,0 +1,42 @@
+[
+  {
+    "route": "keypic/support/",
+    "source": "WoozyLab@fd44b08:keypic/support/index.html",
+    "bodySHA256": "2e8fdc9e04fd6033bd5de3d3843b58a85345ac5043865374e88dcfe1e3eae086"
+  },
+  {
+    "route": "keypic/privacy/",
+    "source": "WoozyLab@fd44b08:keypic/privacy/index.html",
+    "bodySHA256": "3b301739059d07bab23f49d75b4f447d9085cde7a9d735eb6dd2b246adc554f8"
+  },
+  {
+    "route": "glasslingo/support/",
+    "source": "WoozyLab@fd44b08:glasslingo/support/index.html",
+    "bodySHA256": "4dc1cf1ea3cce2f2e0c8430646cb70e5d88297cfe668c7fc57a47c326f08cf31"
+  },
+  {
+    "route": "glasslingo/privacy/",
+    "source": "WoozyLab@fd44b08:glasslingo/privacy/index.html",
+    "bodySHA256": "05d6c1ae507ce65951d99b6fc7401ffbd687a7a9c01c1602bc654ce1d1b1fb9f"
+  },
+  {
+    "route": "en/keypic/support/",
+    "source": "WoozyLab@fd44b08:en/keypic/support/index.html",
+    "bodySHA256": "9409c92d8ca89af1efde563793b42f744a4db493c44701d59857ca212f881d5c"
+  },
+  {
+    "route": "en/keypic/privacy/",
+    "source": "WoozyLab@fd44b08:en/keypic/privacy/index.html",
+    "bodySHA256": "cb8128ac38fe0fe48eb5c61b8a7cb9a4608fada08c453db66e5349e6688351a9"
+  },
+  {
+    "route": "orannamu/support/",
+    "source": "WitnessTree@3671b0e:docs/legal-site/support/index.html",
+    "bodySHA256": "59870d6c2e52d086d469051dbcb2f35b18179bbdcb2e3bbc3dfbf067a0e654f7"
+  },
+  {
+    "route": "orannamu/privacy/",
+    "source": "WitnessTree@3671b0e:docs/legal-site/privacy/index.html",
+    "bodySHA256": "af0b05a6f2f54c9be681b2512ad2392dc00aacf43ba110571649a8dc775ed97d"
+  }
+]
