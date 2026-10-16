@@ -1,6 +1,7 @@
-import { escapeHTML as e, relativeURL, appRoute } from './layout.mjs';
+import { escapeHTML as e, relativeURL, appRoute, hasEnglishPages } from './layout.mjs';
 
 const englishKeyPic = {
+  status: 'Available',
   summary: 'Review large photo sets quickly with keyboard shortcuts and organize them into folders on your Mac.',
   tagline: 'KeyPic',
   features: [{title:'Photo review and organization', description:'Review photos with keyboard shortcuts and organize them into folders on your Mac.'}]
@@ -8,10 +9,11 @@ const englishKeyPic = {
 
 export function appCard(app, route, locale, role = '') {
   const english = locale === 'en';
-  const koreanTarget = english && app.slug !== 'keypic';
-  const summary = english && app.slug === 'keypic' ? englishKeyPic.summary : app.summary;
+  const koreanTarget = english && !hasEnglishPages(app);
+  const copy = english ? (app.english ?? (app.slug === 'keypic' ? englishKeyPic : app)) : app;
+  const summary = copy.summary;
   const url = target => e(relativeURL(route, target));
-  const status = english && app.slug === 'keypic' ? 'Available' : app.status;
+  const status = copy.status;
   const action = role === 'support' ? 'Support' : role === 'privacy' ? 'Privacy Policy' : english ? 'Explore app' : '앱 살펴보기';
   return `<article class="app-card theme-${app.slug}"><div class="app-card-top"><img class="app-icon" src="${url(app.icon)}" width="88" height="88" alt="${e(app.name)} ${english ? 'app icon' : '앱 아이콘'}"><span class="platform">${e(app.platform)}</span></div><div class="app-card-heading"><h3>${e(app.name)}</h3>${status ? `<span class="status">${e(status)}</span>` : ''}</div><p class="description"${koreanTarget ? ' lang="ko"' : ''}>${e(summary)}</p><a class="card-action" href="${url(appRoute(app, role, locale))}"${koreanTarget ? ' hreflang="ko"' : ''}>${action}${koreanTarget ? ' · 한국어' : ''}<span aria-hidden="true">↗</span></a></article>`;
 }
@@ -37,11 +39,11 @@ export function hubPage(site, apps, route, locale, kind) {
 
 export function productPage(app, route, locale) {
   const english = locale === 'en';
-  const copy = english ? {...app, ...englishKeyPic} : app;
+  const copy = english ? {...app, ...(app.english ?? englishKeyPic)} : app;
   const url = target => e(relativeURL(route,target));
   const shots = app.screenshots;
   const visual = shots.length ? `<figure class="product-preview"><img src="${url(shots[0].path)}" width="1260" height="2736" alt="${e(shots[0].alt)}"><figcaption>출시 준비 중인 앱 화면</figcaption></figure>` : `<div class="product-symbol"><img src="${url(app.icon)}" width="240" height="240" alt="${e(app.name)} ${english ? 'app icon' : '앱 아이콘'}"></div>`;
-  return `<section class="product-hero" aria-labelledby="product-title"><div><div class="product-identity"><img src="${url(app.icon)}" width="64" height="64" alt=""><span>${e(app.name)}<small>${e(app.platform)}${app.status ? ' · ' + e(english ? 'Available' : app.status) : ''}</small></span></div><h1 id="product-title">${e(copy.tagline ?? app.name)}</h1><p class="intro">${e(copy.summary)}</p><div class="action-links">${app.appStoreURL ? `<a class="button primary" href="${e(app.appStoreURL)}">App Store ↗</a>` : ''}<a class="button ${app.appStoreURL ? 'secondary' : 'primary'}" href="${url(appRoute(app,'support',locale))}">${english ? 'Support' : '사용·지원 안내'}</a><a class="text-link" href="${url(appRoute(app,'privacy',locale))}">${english ? 'Privacy Policy' : '개인정보 처리방침'} ↗</a></div></div>${visual}</section>
+  return `<section class="product-hero" aria-labelledby="product-title"><div><div class="product-identity"><img src="${url(app.icon)}" width="64" height="64" alt=""><span>${e(app.name)}<small>${e(app.platform)}${copy.status ? ' · ' + e(copy.status) : ''}</small></span></div><h1 id="product-title">${e(copy.tagline ?? app.name)}</h1><p class="intro">${e(copy.summary)}</p><div class="action-links">${app.appStoreURL ? `<a class="button primary" href="${e(app.appStoreURL)}">App Store ↗</a>` : ''}<a class="button ${app.appStoreURL ? 'secondary' : 'primary'}" href="${url(appRoute(app,'support',locale))}">${english ? 'Support' : '사용·지원 안내'}</a><a class="text-link" href="${url(appRoute(app,'privacy',locale))}">${english ? 'Privacy Policy' : '개인정보 처리방침'} ↗</a></div></div>${visual}</section>
   <section class="features-section" id="${e(app.slug)}" aria-labelledby="features-title"><div class="section-heading"><p class="eyebrow">INSIDE ${e(app.name).toUpperCase()}</p><h2 id="features-title">${english ? 'Made for your everyday workflow.' : app.slug === 'orannamu' ? '오래된 나무를 만나는 세 가지 방법.' : '필요한 순간에, 필요한 만큼.'}</h2></div><div class="feature-grid">${copy.features.map((f,i)=>`<article class="feature"><span class="feature-number">0${i+1}</span><h3>${e(f.title)}</h3><p>${e(f.description)}</p></article>`).join('')}</div></section>
   ${shots.length > 1 ? `<section class="story-feature"><figure><img src="${url(shots[1].path)}" width="1260" height="2736" loading="lazy" alt="${e(shots[1].alt)}"></figure><div><p class="eyebrow">WITNESS THE TIME</p><h2>같은 나무 곁에서,<br>다른 시간을 만납니다.</h2><p>나무가 바라본 장소는 어떻게 달라졌을까요? 시대별 장면을 따라가며 오늘의 풍경과 지난 시간을 연결합니다.</p><p class="notice">과거 장면은 편집 재구성 이미지이며 실제 당시 사진이 아닙니다.</p></div></section>` : ''}
   <section class="product-help" id="support"><h2>${english ? 'Help when you need it.' : '사용 중 궁금한 점이 있다면.'}</h2><div class="action-links"><a href="${url(appRoute(app,'support',locale))}">${e(app.name)} ${english ? 'Support' : '고객지원'} ↗</a><a id="privacy" href="${url(appRoute(app,'privacy',locale))}">${english ? 'Privacy Policy' : '개인정보 처리방침'} ↗</a><a href="mailto:${e(app.supportEmail)}">Contact ↗</a></div></section>`;

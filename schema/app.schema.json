@@ -140,6 +140,35 @@
       "items": {
         "$ref": "#/$defs/nonEmptyString"
       }
+    },
+    "english": {
+      "description": "검토가 끝난 영어 소개 문구입니다. 지원과 개인정보 문서도 있어야 영어 상세 페이지를 생성합니다.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "tagline",
+        "summary",
+        "features"
+      ],
+      "properties": {
+        "status": {
+          "$ref": "#/$defs/nullableNonEmptyString"
+        },
+        "tagline": {
+          "$ref": "#/$defs/nullableNonEmptyString"
+        },
+        "summary": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "features": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/feature"
+          }
+        }
+      }
     }
   },
   "$defs": {

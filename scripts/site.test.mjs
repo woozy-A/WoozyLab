@@ -13,7 +13,7 @@ const apps = await Promise.all((await readdir(path.join(root,'apps'))).filter(f=
 const site = await json('content/site.json');
 const documents = await json('content/documents.json');
 const provenance = await json('content/document-provenance.json');
-const routes = ['', 'support/', 'privacy/', 'en/', 'en/support/', 'en/privacy/', ...apps.flatMap(a=>['','support/','privacy/'].map(role=>a.slug+'/'+role)), 'en/keypic/','en/keypic/support/','en/keypic/privacy/'];
+const routes = ['', 'support/', 'privacy/', 'en/', 'en/support/', 'en/privacy/', ...apps.flatMap(a=>['','support/','privacy/'].map(role=>a.slug+'/'+role)), 'en/keypic/','en/keypic/support/','en/keypic/privacy/','en/glasslingo/','en/glasslingo/support/','en/glasslingo/privacy/'];
 
 test('Relative paths preserve local previews, nested URLs and anchors',()=>{
   assert.equal(relativeURL('', 'keypic/'), './keypic/');
@@ -26,7 +26,8 @@ test('Relative paths preserve local previews, nested URLs and anchors',()=>{
 test('Text escaping never emits raw HTML',()=>assert.equal(escapeHTML(`<a x="a&b">'`), '&lt;a x=&quot;a&amp;b&quot;&gt;&#39;'));
 test('Only verified English app routes are emitted',()=>{
   assert.equal(appRoute({slug:'keypic'},'privacy','en'),'en/keypic/privacy/');
-  assert.equal(appRoute({slug:'glasslingo'},'support','en'),'glasslingo/support/');
+  assert.equal(appRoute(apps.find(a=>a.slug==='glasslingo'),'support','en'),'en/glasslingo/support/');
+  assert.equal(appRoute({slug:'unreviewed'},'support','en'),'unreviewed/support/');
   assert.equal(appRoute({slug:'orannamu'},'','en'),'orannamu/');
 });
 test('Every registered app has exactly one ordering entry',()=>assert.deepEqual([...site.appOrder].sort(), apps.map(a=>a.slug).sort()));
@@ -53,6 +54,26 @@ for (const record of provenance) test(`Reviewed document body preserved: ${recor
   const body=documents[record.route].body;
   assert.equal(createHash('sha256').update(body).digest('hex'),record.bodySHA256);
   assert.ok((await read(record.route+'index.html')).includes(body));
+  if (record.sourceFile) {
+    const source = await read(record.sourceFile);
+    assert.equal(createHash('sha256').update(source).digest('hex'),record.sourceSHA256);
+    const normalize = value => value.replace(/\s+/g,' ').trim();
+    const bodyText = body.replace(/<\/?(?:section|h2|p)\b[^>]*>|<br\s*\/?>/g,' ').replace(/<[^>]+>/g,'').replaceAll('&amp;','&').replaceAll('&lt;','<').replaceAll('&gt;','>').replaceAll('&quot;','"').replaceAll('&#39;',"'");
+    assert.equal(normalize(bodyText),normalize(source.replace(/^## /gm,'')), 'Policy text must match the approved source, including retention and separate consent');
+  }
+});
+
+test('GlassLingo English launch pages keep public language scope and pending release status',async()=>{
+  const html = await read('en/glasslingo/index.html');
+  assert.ok(html.includes('Preparing for release'));
+  assert.ok(!html.includes('>App Store'));
+  assert.ok(html.includes('English to Korean and Korean to English'));
+  assert.ok(html.includes('macOS 26.4+'));
+  const support = await read('en/glasslingo/support/index.html');
+  assert.ok(support.includes('macOS 27 or later'));
+  assert.ok(support.includes('Apple Intelligence-capable Mac'));
+  assert.ok(support.includes('30 days after resolution'));
+  assert.ok(support.includes('separate consent'));
 });
 for (const app of apps) test(`Consistent links, copy and contact: ${app.slug}`,async()=>{
   const product = await read(app.slug+'/index.html');

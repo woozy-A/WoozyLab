@@ -324,7 +324,10 @@ const requiredPublicFiles = [
   "en/privacy/index.html",
   "en/keypic/index.html",
   "en/keypic/support/index.html",
-  "en/keypic/privacy/index.html"
+  "en/keypic/privacy/index.html",
+  "en/glasslingo/index.html",
+  "en/glasslingo/support/index.html",
+  "en/glasslingo/privacy/index.html"
 ];
 
 for (const publicFile of requiredPublicFiles) {
@@ -337,7 +340,10 @@ const localizedPagePairs = [
   ["privacy/index.html", "en/privacy/index.html"],
   ["keypic/index.html", "en/keypic/index.html"],
   ["keypic/support/index.html", "en/keypic/support/index.html"],
-  ["keypic/privacy/index.html", "en/keypic/privacy/index.html"]
+  ["keypic/privacy/index.html", "en/keypic/privacy/index.html"],
+  ["glasslingo/index.html", "en/glasslingo/index.html"],
+  ["glasslingo/support/index.html", "en/glasslingo/support/index.html"],
+  ["glasslingo/privacy/index.html", "en/glasslingo/privacy/index.html"]
 ];
 
 for (const [koreanPath, englishPath] of localizedPagePairs) {

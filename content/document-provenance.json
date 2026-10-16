@@ -11,13 +11,29 @@
   },
   {
     "route": "glasslingo/support/",
-    "source": "WoozyLab@fd44b08:glasslingo/support/index.html",
-    "bodySHA256": "4dc1cf1ea3cce2f2e0c8430646cb70e5d88297cfe668c7fc57a47c326f08cf31"
+    "source": "GlassLingo@e1a1086:docs/release/APP_STORE_SUBMISSION_DRAFT.md; approved bundled PrivacyPolicy.txt; existing WoozyLab support instructions",
+    "sourceSHA256": "ba5f5580f640161eb6ae6a2b7f1d41ab8aaa7a9b2b0ba9d134d7effda5d26a02",
+    "bodySHA256": "ac1568411484087733d5dfd8156fbc7218f1aa9f72ec7d157eafedad1a6d1410",
+    "importedAt": "2026-10-16",
+    "previousSource": {
+      "route": "glasslingo/support/",
+      "source": "WoozyLab@fd44b08:glasslingo/support/index.html",
+      "bodySHA256": "4dc1cf1ea3cce2f2e0c8430646cb70e5d88297cfe668c7fc57a47c326f08cf31"
+    }
   },
   {
     "route": "glasslingo/privacy/",
-    "source": "WoozyLab@fd44b08:glasslingo/privacy/index.html",
-    "bodySHA256": "05d6c1ae507ce65951d99b6fc7401ffbd687a7a9c01c1602bc654ce1d1b1fb9f"
+    "source": "GlassLingo@e1a1086:Glasslingo/Glasslingo/ko.lproj/PrivacyPolicy.txt",
+    "sourceFile": "content/sources/glasslingo/2026-10-13/ko-PrivacyPolicy.txt",
+    "sourceSHA256": "3da12a5937be8b759357e7a9ef8a1eea5ab4385b4c438fed9b0dfc5bb39fc185",
+    "bodySHA256": "b1191f2f7c9cad5d0c765c5ae36bfac4fff73687ed2d518bc56665055fbec753",
+    "approvedAt": "2026-10-13",
+    "importedAt": "2026-10-16",
+    "previousSource": {
+      "route": "glasslingo/privacy/",
+      "source": "WoozyLab@fd44b08:glasslingo/privacy/index.html",
+      "bodySHA256": "05d6c1ae507ce65951d99b6fc7401ffbd687a7a9c01c1602bc654ce1d1b1fb9f"
+    }
   },
   {
     "route": "en/keypic/support/",
@@ -38,5 +54,21 @@
     "route": "orannamu/privacy/",
     "source": "WitnessTree@3671b0e:docs/legal-site/privacy/index.html",
     "bodySHA256": "af0b05a6f2f54c9be681b2512ad2392dc00aacf43ba110571649a8dc775ed97d"
+  },
+  {
+    "route": "en/glasslingo/privacy/",
+    "source": "GlassLingo@e1a1086:Glasslingo/Glasslingo/en.lproj/PrivacyPolicy.txt",
+    "sourceFile": "content/sources/glasslingo/2026-10-13/en-PrivacyPolicy.txt",
+    "sourceSHA256": "8cc36af8bc602d2b7a7e2b2c8c79b3d0301fe5db5aa05266adc5b01f03fdb0b7",
+    "bodySHA256": "0d8ac0c1c8c3d4a3158102920bd8bdb315204dab88acf2f821fd69e5a612f7fb",
+    "approvedAt": "2026-10-13",
+    "importedAt": "2026-10-16"
+  },
+  {
+    "route": "en/glasslingo/support/",
+    "source": "GlassLingo@e1a1086:docs/release/APP_STORE_SUBMISSION_DRAFT.md; approved bundled PrivacyPolicy.txt; existing WoozyLab support instructions",
+    "sourceSHA256": "ba5f5580f640161eb6ae6a2b7f1d41ab8aaa7a9b2b0ba9d134d7effda5d26a02",
+    "bodySHA256": "328e6e2cad67a0515cec2363a5ab14428f57b6c47a988da0210af252483c4175",
+    "importedAt": "2026-10-16"
   }
 ]

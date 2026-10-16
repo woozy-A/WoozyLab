@@ -1,0 +1,28 @@
+## GlassLingo · October 13, 2026
+This notice describes screen reading, translation, on-device AI retranslation and local data handling in the current app. Operated by WoozyLab. Contact: ycw012@naver.com
+
+## Screen reading and permission
+GlassLingo captures the area selected by your lens and reads text with Apple Vision. Screen Recording permission is required and can be revoked in macOS System Settings. It does not continuously record your full screen or automatically save recordings. The lens may appear in other apps' screen sharing.
+
+## Translation and AI
+Standard translation runs on device using Apple Translation. On supported Macs, AI retranslation uses Apple Foundation Models to process the source and nearby context on the same device when you choose it. GlassLingo does not send screen images or text to developer servers or external AI or translation APIs. Preparing Apple's translation or AI models may require an internet connection to download system model assets.
+
+## Stored information
+The current screen image, OCR text, translation and QA diagnostics are used in app memory. They are replaced by new results or the Clear action and disappear from memory when the app exits. Language pairs, shortcuts, lens size and tutorial completion are stored on this Mac. macOS manages launch at login. Normal use does not automatically accumulate translation history or screenshots on disk.
+
+## Copying and feedback
+Copy places the chosen source, translation or feedback report on the system clipboard. A translation problem report may include source text, translation, app version, language pair, translation engine and your description; development QA reports can also contain diagnostics. Opening the report window keeps the source and translation from that moment in the draft, so a new translation does not change the report. The draft inside GlassLingo is discarded when you close the report window or quit the app. No screen image is attached to the draft.
+
+You can edit the report to remove personal or confidential information before copying it or opening a support email draft. The report is passed to an email app only when you choose to open the draft. GlassLingo does not send reports automatically; you must review the draft in your email app and send it yourself. Clipboard syncing, handling by destination apps, and email draft storage and sending follow your system settings and the policies of the relevant apps and email services.
+
+## Retention and deletion of received reports
+When you send a report email yourself, the operator receives your sender email address and report content. Received emails and any separately saved copies are used to investigate and respond to the report, and are deleted within 30 days after the report is resolved. They are deleted from the operator's mailbox and separate storage locations. You can request deletion at ycw012@naver.com.
+
+Reusing report content as examples for translation quality checks requires your separate consent first. When asking for consent, we explain the scope of reuse and retention period, and use only examples with personal information, such as names and contact details, and confidential information removed. You can report problems and receive support without consenting to reuse.
+
+## Accounts and analytics
+The current app has no accounts, payment server, advertising SDK, external analytics SDK or external crash reporting SDK. Diagnostics collected by App Store, TestFlight or macOS follow Apple's policies and your system settings.
+
+## Changes and contact
+Changes to data handling will be reflected in the policy and announced in the app. Web policy: https://woozy-a.github.io/WoozyLab/glasslingo/privacy/
+Privacy contact: ycw012@naver.com

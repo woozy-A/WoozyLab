@@ -15,7 +15,11 @@ export function relativeURL(route, target) {
 
 export function appRoute(app, role = '', locale = 'ko') {
   // 검증된 영어 상세 페이지가 없는 앱은 한국어 페이지로 안내한다.
-  return `${locale === 'en' && app.slug === 'keypic' ? 'en/' : ''}${app.slug}/${role ? role + '/' : ''}`;
+  return `${locale === 'en' && hasEnglishPages(app) ? 'en/' : ''}${app.slug}/${role ? role + '/' : ''}`;
+}
+
+export function hasEnglishPages(app) {
+  return app.slug === 'keypic' || Boolean(app.english);
 }
 
 export function layout({route, locale = 'ko', title, description, content, site, app, role = '', cssVersion}) {
@@ -23,7 +27,7 @@ export function layout({route, locale = 'ko', title, description, content, site,
   const base = english ? 'en/' : '';
   const url = target => escapeHTML(relativeURL(route, target));
   const link = (target, text, extra = '') => `<a href="${url(target)}"${target === route ? ' aria-current="page"' : ''}${extra}>${text}</a>`;
-  const hasAlternate = !app || app.slug === 'keypic';
+  const hasAlternate = !app || hasEnglishPages(app);
   const alternate = english ? route.replace(/^en\//, '') : `en/${route}`;
   const language = hasAlternate ? link(alternate, english ? '한국어' : 'English', ` lang="${english ? 'ko' : 'en'}" hreflang="${english ? 'ko' : 'en'}"`) : '';
   const contact = app?.supportEmail ?? site.contactEmail;

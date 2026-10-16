@@ -3,9 +3,9 @@
   "slug": "glasslingo",
   "name": "GlassLingo",
   "status": "출시 준비",
-  "platform": "macOS",
-  "tagline": "부분만 번역하는 맥용 렌즈",
-  "summary": "GlassLingo는 화면 위 필요한 부분만 빠르게 이해할 수 있도록 돕는 macOS 부분 번역 렌즈입니다.",
+  "platform": "macOS 26.4+",
+  "tagline": "필요한 부분만 화면 번역",
+  "summary": "화면에서 선택하기 어려운 문장을 읽고 번역하는 Mac용 렌즈입니다. 첫 무료 공개판은 영어→한국어와 한국어→영어 번역을 제공합니다.",
   "appStoreURL": null,
   "supportEmail": "ycw012@naver.com",
   "marketingURL": "https://woozy-A.github.io/WoozyLab/glasslingo/",
@@ -14,44 +14,69 @@
   "permissions": [
     {
       "name": "화면 기록",
-      "purpose": "GlassLingo는 화면 일부를 읽어야 하므로 macOS의 화면 기록 권한이 필요합니다.",
+      "purpose": "화면 기록 권한은 사용자가 배치한 렌즈 영역을 캡처하고 글자를 읽는 데 필요합니다.",
       "required": true
     }
   ],
   "privacyFacts": [
-    "기본 모드는 별도 서버, 계정, 데이터베이스 없이 동작하는 방향을 우선합니다.",
-    "번역을 위해 렌즈 영역의 화면 이미지만 읽으며, 전체 화면 번역 앱이 아닙니다.",
-    "무료 기본 버전은 외부 번역 API 또는 LLM API를 사용하지 않습니다.",
-    "향후 고급 번역 기능이 추가될 경우, 데이터 처리 방식과 개인정보 정책을 별도로 안내합니다."
+    "GlassLingo는 화면 이미지와 텍스트를 개발자 서버나 외부 AI·번역 API로 전송하지 않습니다.",
+    "기본 사용에서 번역 기록이나 화면 이미지를 자동으로 디스크에 축적하지 않습니다.",
+    "앱이 신고를 자동으로 전송하지 않으며, 사용자가 메일 앱에서 초안을 확인한 뒤 직접 보내야 합니다.",
+    "수신한 메일과 문제 해결을 위해 따로 저장한 사본은 신고 확인과 답변에 사용하며, 해당 신고 해결 후 30일 이내 삭제합니다.",
+    "신고 내용을 번역 품질 검증용 예문으로 재사용하려면 별도 동의를 먼저 받습니다."
   ],
   "features": [
     {
-      "title": "부분 번역",
-      "description": "렌즈를 필요한 화면 영역에 맞추면 그 부분만 번역합니다. 전체 페이지 번역을 켰다 끄는 번거로움을 줄입니다."
+      "title": "필요한 부분만 읽기",
+      "description": "이미지·PDF·앱 화면에서 선택하기 어려운 글자 위에 렌즈를 올려두세요. 크기를 맞춘 뒤 손을 놓으면 글자를 읽고 원문 위치에 번역을 겹쳐 보여줍니다."
     },
     {
-      "title": "복사 불가능한 영역",
-      "description": "선택할 수 없는 앱 화면, 이미지, PDF, 영상 속 텍스트도 화면 캡처와 OCR로 읽는 흐름을 사용합니다."
+      "title": "영어와 한국어 양방향",
+      "description": "첫 무료 공개판은 영어→한국어와 한국어→영어를 지원합니다. 원문과 번역할 언어를 바꾸고, 읽은 원문이나 번역문을 복사할 수 있습니다. 사용 가능 여부는 이 Mac의 Apple 번역 지원과 설치된 모델에 따라 달라집니다."
     },
     {
-      "title": "온디바이스 우선",
-      "description": "기본 번역 흐름은 Apple Vision OCR과 Apple 번역 기술을 우선하며, 별도 서버나 외부 번역 API를 사용하지 않습니다."
+      "title": "Mac 안에서 처리",
+      "description": "Apple Vision과 Apple Translation으로 화면 읽기와 기본 번역을 기기 안에서 처리합니다. macOS 26.4 이상과 화면 기록 권한이 필요하며, 언어 모델 준비에는 인터넷이 필요할 수 있습니다."
     }
   ],
   "screenshots": [],
   "accentColor": "#006E69",
   "icon": "assets/glasslingo-icon.png",
-  "privacyPolicyUpdatedAt": "2026-06-10",
-  "updatedAt": "2026-09-06",
+  "privacyPolicyUpdatedAt": "2026-10-13",
+  "updatedAt": "2026-10-16",
   "sourceFiles": [
-    "index.html",
+    "content/GLASSLINGO_SOURCES.md",
+    "content/sources/glasslingo/2026-10-13/ko-PrivacyPolicy.txt",
+    "content/sources/glasslingo/2026-10-13/en-PrivacyPolicy.txt",
+    "content/documents.json",
     "glasslingo/index.html",
     "glasslingo/support/index.html",
     "glasslingo/privacy/index.html",
-    "README.md"
+    "en/glasslingo/index.html",
+    "en/glasslingo/support/index.html",
+    "en/glasslingo/privacy/index.html"
   ],
   "todos": [
     "App Store 공개 URL을 출시 후 확인해야 합니다.",
-    "기본 모드와 무료 기본 버전의 개인정보 조건이 현재 앱 동작과 일치하는지 출시 전에 다시 확인해야 합니다."
-  ]
+    "실제 배포 후보 앱의 사용 장면으로 스크린샷을 준비해야 합니다."
+  ],
+  "english": {
+    "status": "Preparing for release",
+    "tagline": "Translate part of your screen",
+    "summary": "A Mac lens that reads and translates text that is hard to select on screen. The first free release supports English to Korean and Korean to English.",
+    "features": [
+      {
+        "title": "Read the area you need",
+        "description": "Place the lens over text that is hard to select in an image, PDF, or app. Resize it and release the handle to read the text and overlay a translation where it appears."
+      },
+      {
+        "title": "English and Korean, both ways",
+        "description": "The first free release supports English to Korean and Korean to English. Swap the source and target, then copy recognized text or the translation. Availability depends on Apple’s language-pair support and the models installed on your Mac."
+      },
+      {
+        "title": "Processed on your Mac",
+        "description": "Apple Vision and Apple Translation handle screen reading and standard translation on device. Requires macOS 26.4 or later and Screen Recording permission. Preparing language models may require an internet connection."
+      }
+    ]
+  }
 }

@@ -2,7 +2,7 @@ import { readFile, readdir, mkdir, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
-import { layout } from './lib/layout.mjs';
+import { layout, hasEnglishPages } from './lib/layout.mjs';
 import { homePage, hubPage, productPage, documentPage } from './lib/pages.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -22,9 +22,9 @@ for (const locale of ['ko','en']) {
     const route = base+role+'/';
     add(route,{locale,title:`${role === 'support' ? 'Support' : 'Privacy'} | WoozyLab`,content:hubPage(site,apps,route,locale,role),description:locale === 'ko' ? 'WoozyLab 앱별 지원·개인정보 안내입니다.' : 'Support and privacy information for WoozyLab apps.'});
   }
-  for (const app of apps.filter(app=>locale === 'ko' || app.slug === 'keypic')) {
+  for (const app of apps.filter(app=>locale === 'ko' || hasEnglishPages(app))) {
     const route = base+app.slug+'/';
-    add(route,{locale,app,title:`${app.name} | WoozyLab`,description:locale === 'en' ? 'KeyPic for macOS. Photo review and organization.' : app.summary,content:productPage(app,route,locale)});
+    add(route,{locale,app,title:`${app.name} | WoozyLab`,description:locale === 'en' ? (app.english?.summary ?? 'KeyPic for macOS. Photo review and organization.') : app.summary,content:productPage(app,route,locale)});
     for (const role of ['support','privacy']) {
       const docRoute = route+role+'/';
       const doc = docs[docRoute];
