@@ -23,16 +23,25 @@
   },
   {
     "route": "glasslingo/privacy/",
-    "source": "GlassLingo@e1a1086:Glasslingo/Glasslingo/ko.lproj/PrivacyPolicy.txt",
-    "sourceFile": "content/sources/glasslingo/2026-10-13/ko-PrivacyPolicy.txt",
-    "sourceSHA256": "3da12a5937be8b759357e7a9ef8a1eea5ab4385b4c438fed9b0dfc5bb39fc185",
-    "bodySHA256": "b1191f2f7c9cad5d0c765c5ae36bfac4fff73687ed2d518bc56665055fbec753",
-    "approvedAt": "2026-10-13",
-    "importedAt": "2026-10-16",
+    "source": "User-approved GlassLingo V4.08 (48) screen-capture clarification, 2026-10-23; V4.08_PRIVACY_CLARIFICATION_2026-10-23.md; existing approved bundled PrivacyPolicy.txt",
+    "sourceFile": "content/sources/glasslingo/2026-10-23/ko-PrivacyPolicy.txt",
+    "sourceSHA256": "96cbff9a40f49f36a2ac6f3e15872e7cbeac602c5aa1e034b5d7a1e1853a3a52",
+    "bodySHA256": "5da413ef67c7fe5f27c82ed32122f75c1993ac9790c88396c5f78d21526ae6d6",
+    "approvedAt": "2026-10-23",
+    "importedAt": "2026-10-23",
     "previousSource": {
       "route": "glasslingo/privacy/",
-      "source": "WoozyLab@fd44b08:glasslingo/privacy/index.html",
-      "bodySHA256": "05d6c1ae507ce65951d99b6fc7401ffbd687a7a9c01c1602bc654ce1d1b1fb9f"
+      "source": "GlassLingo@e1a1086:Glasslingo/Glasslingo/ko.lproj/PrivacyPolicy.txt",
+      "sourceFile": "content/sources/glasslingo/2026-10-13/ko-PrivacyPolicy.txt",
+      "sourceSHA256": "3da12a5937be8b759357e7a9ef8a1eea5ab4385b4c438fed9b0dfc5bb39fc185",
+      "bodySHA256": "b1191f2f7c9cad5d0c765c5ae36bfac4fff73687ed2d518bc56665055fbec753",
+      "approvedAt": "2026-10-13",
+      "importedAt": "2026-10-16",
+      "previousSource": {
+        "route": "glasslingo/privacy/",
+        "source": "WoozyLab@fd44b08:glasslingo/privacy/index.html",
+        "bodySHA256": "05d6c1ae507ce65951d99b6fc7401ffbd687a7a9c01c1602bc654ce1d1b1fb9f"
+      }
     }
   },
   {
@@ -57,12 +66,21 @@
   },
   {
     "route": "en/glasslingo/privacy/",
-    "source": "GlassLingo@e1a1086:Glasslingo/Glasslingo/en.lproj/PrivacyPolicy.txt",
-    "sourceFile": "content/sources/glasslingo/2026-10-13/en-PrivacyPolicy.txt",
-    "sourceSHA256": "8cc36af8bc602d2b7a7e2b2c8c79b3d0301fe5db5aa05266adc5b01f03fdb0b7",
-    "bodySHA256": "0d8ac0c1c8c3d4a3158102920bd8bdb315204dab88acf2f821fd69e5a612f7fb",
-    "approvedAt": "2026-10-13",
-    "importedAt": "2026-10-16"
+    "source": "User-approved GlassLingo V4.08 (48) screen-capture clarification, 2026-10-23; V4.08_PRIVACY_CLARIFICATION_2026-10-23.md; existing approved bundled PrivacyPolicy.txt",
+    "sourceFile": "content/sources/glasslingo/2026-10-23/en-PrivacyPolicy.txt",
+    "sourceSHA256": "c1dda83abc19ea2734a527434a1b829453fe6f6bff9fa2e87e819288e97ad66c",
+    "bodySHA256": "1a81981cd95ecdf18427ba1549867016e5aef32367ba46e29fa9a1a0bb716616",
+    "approvedAt": "2026-10-23",
+    "importedAt": "2026-10-23",
+    "previousSource": {
+      "route": "en/glasslingo/privacy/",
+      "source": "GlassLingo@e1a1086:Glasslingo/Glasslingo/en.lproj/PrivacyPolicy.txt",
+      "sourceFile": "content/sources/glasslingo/2026-10-13/en-PrivacyPolicy.txt",
+      "sourceSHA256": "8cc36af8bc602d2b7a7e2b2c8c79b3d0301fe5db5aa05266adc5b01f03fdb0b7",
+      "bodySHA256": "0d8ac0c1c8c3d4a3158102920bd8bdb315204dab88acf2f821fd69e5a612f7fb",
+      "approvedAt": "2026-10-13",
+      "importedAt": "2026-10-16"
+    }
   },
   {
     "route": "en/glasslingo/support/",
