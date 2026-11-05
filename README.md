@@ -5,6 +5,9 @@ WoozyLab 앱의 제품 소개, 고객지원, 개인정보 처리방침을 제공
 ## 공개 사이트
 
 - WoozyLab: https://woozy-A.github.io/WoozyLab/
+- WeatherFit: https://woozy-a.github.io/WoozyLab/weatherfit/
+- WeatherFit Support: https://woozy-a.github.io/WoozyLab/weatherfit/support/
+- WeatherFit Privacy Policy: https://woozy-a.github.io/WoozyLab/weatherfit/privacy/
 - 밥픽 Web Lab: https://woozy-a.github.io/lunch-picker/
 - Support Hub: https://woozy-A.github.io/WoozyLab/support/
 - Privacy Hub: https://woozy-A.github.io/WoozyLab/privacy/
@@ -24,7 +27,7 @@ WoozyLab 앱의 제품 소개, 고객지원, 개인정보 처리방침을 제공
 ## 관리 구조
 
 **HTML은 생성 결과입니다. 페이지마다 메뉴를 직접 고치지 마세요.**
-세 앱과 18개 공개 페이지가 같은 레이아웃을 사용합니다. 앱마다 다른 것은 아이콘·색·내용이고, 메뉴·푸터·지원 문서의 읽기 방식은 같습니다.
+네 앱과 24개 공개 페이지가 같은 레이아웃을 사용합니다. 앱마다 다른 것은 아이콘·색·내용이고, 메뉴·푸터·지원 문서의 읽기 방식은 같습니다.
 
 | 바꾸려는 것 | 수정할 곳 |
 |---|---|
@@ -53,7 +56,7 @@ assets/
   css/themes.css            앱별 개성
   ...                       앱 아이콘과 앱·Web Lab 미리보기
 scripts/
-  build-site.mjs            공통 틀로 18개 HTML 생성
+  build-site.mjs            공통 틀로 24개 HTML 생성
   lib/                     공통 레이아웃과 페이지 구성
   site.test.mjs             문구 보존·메뉴·URL 회귀 검사
   validate-schema.mjs       앱 JSON Schema 검사

@@ -88,5 +88,27 @@
     "sourceSHA256": "ba5f5580f640161eb6ae6a2b7f1d41ab8aaa7a9b2b0ba9d134d7effda5d26a02",
     "bodySHA256": "328e6e2cad67a0515cec2363a5ab14428f57b6c47a988da0210af252483c4175",
     "importedAt": "2026-10-16"
+  },
+  {
+    "route": "weatherfit/support/",
+    "source": "WeatherFit@fcb98d1 plus user-authorized publication update 2026-11-06: docs/release-site/index.html",
+    "sourceFile": "content/sources/weatherfit/2026-11-06/support-approved.txt",
+    "sourceSHA256": "5b5dff69a8afd6e5e1a72102ee8aced6b5339e9467b5e405804cc3fef8da0395",
+    "sourceHTMLFile": "content/sources/weatherfit/2026-11-06/support.source.html.txt",
+    "sourceHTMLSHA256": "8a26d33e3421959a2376e709007adfcede547a4585f99f4f8fdbc23564e86efc",
+    "bodySHA256": "06966cb1e09b80df680f722012f1e7fa19fb293bff72b44c4db0149dd4d27316",
+    "approvedAt": "2026-11-06",
+    "importedAt": "2026-11-06"
+  },
+  {
+    "route": "weatherfit/privacy/",
+    "source": "WeatherFit@fcb98d1 plus user-authorized publication update 2026-11-06: docs/release-site/privacy.html",
+    "sourceFile": "content/sources/weatherfit/2026-11-06/privacy-approved.txt",
+    "sourceSHA256": "08b0beee242b061b9ace585731e3ff7e1967cda9e55849303a3ff8f6391cc327",
+    "sourceHTMLFile": "content/sources/weatherfit/2026-11-06/privacy.source.html.txt",
+    "sourceHTMLSHA256": "ea7773da6dbaad23768324bb39a5e2cf32d1044b3a29c187599796499550db1c",
+    "bodySHA256": "aaad32a8bf7a1d64c3e774faf34f2a416c13eade5d9405b0d494beb641fd8d3c",
+    "approvedAt": "2026-11-06",
+    "importedAt": "2026-11-06"
   }
 ]

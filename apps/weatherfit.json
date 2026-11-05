@@ -1,0 +1,60 @@
+{
+  "$schema": "../schema/app.schema.json",
+  "slug": "weatherfit",
+  "name": "WeatherFit",
+  "status": "출시 준비",
+  "platform": "iPhone",
+  "tagline": "오늘 날씨에 맞는 옷차림.",
+  "summary": "현재 위치의 날씨와 외출 시간에 맞춰 옷차림을 추천하는 iPhone 앱입니다.",
+  "appStoreURL": null,
+  "supportEmail": "ycw012@naver.com",
+  "marketingURL": "https://woozy-a.github.io/WoozyLab/weatherfit/",
+  "supportURL": "https://woozy-a.github.io/WoozyLab/weatherfit/support/",
+  "privacyURL": "https://woozy-a.github.io/WoozyLab/weatherfit/privacy/",
+  "permissions": [
+    {
+      "name": "위치 권한",
+      "purpose": "위치 접근을 허용하지 않으면 현재 위치의 날씨를 새로 불러올 수 없어요.",
+      "required": false
+    }
+  ],
+  "privacyFacts": [
+    "위치 접근을 허용하면 앱에서 날씨를 불러올 때 현재 위치의 위도·경도를 확인합니다. 해당 지역의 예보와 지역 이름을 얻기 위해 Apple의 날씨 서비스인 WeatherKit과 위치 서비스에 전달합니다.",
+    "앱에 저장한 추천 취향, 최근 추천 기록과 코디 계획을 Weatherfit 개발자 서버로 전송하지 않습니다. 회원 계정, 광고 식별자, 광고 SDK 또는 이용자 행동 분석·추적 서비스를 사용하지 않습니다.",
+    "기기에만 저장한 설정과 추천 기록은 운영자가 원격으로 열람하거나 삭제할 수 없습니다."
+  ],
+  "features": [
+    {
+      "title": "날씨를 옷차림으로",
+      "description": "외출 시간대의 체감온도, 비와 바람 등을 반영해 오늘 입을 옷의 종류와 색상을 추천해요."
+    },
+    {
+      "title": "오늘 입을 옷 살펴보기",
+      "description": "아이템 상세에서 오늘만 다른 옷을 고르거나, Pinterest·Google 이미지로 색상과 종류에 맞는 착용 예시를 찾아봐요."
+    },
+    {
+      "title": "내 하루에 맞는 설정",
+      "description": "외출 시간과 추위·더위 성향, 의류·색상 취향을 설정해요. 최근에 불러온 날씨와 추천은 위젯에서도 확인할 수 있어요."
+    }
+  ],
+  "screenshots": [],
+  "accentColor": "#244F8B",
+  "icon": "assets/weatherfit-icon.png",
+  "privacyPolicyUpdatedAt": "2026-11-06",
+  "updatedAt": "2026-11-06",
+  "sourceFiles": [
+    "content/WEATHERFIT_SOURCES.md",
+    "content/documents.json",
+    "content/document-provenance.json",
+    "content/sources/weatherfit/2026-11-06/support-approved.txt",
+    "content/sources/weatherfit/2026-11-06/privacy-approved.txt",
+    "weatherfit/index.html",
+    "weatherfit/support/index.html",
+    "weatherfit/privacy/index.html"
+  ],
+  "todos": [
+    "App Store 공개 URL은 실제 출시 후 확인해 추가한다. 현재 다운로드 버튼을 만들지 않는다.",
+    "영어 소개·지원·개인정보 문서는 번역 및 사실 검토 후 추가한다.",
+    "공개 소개용 실제 앱 화면은 개발용 문구가 없는 캡처를 별도로 선정한다. 현재는 실제 앱 아이콘으로 소개한다."
+  ]
+}

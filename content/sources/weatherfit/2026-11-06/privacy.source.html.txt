@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Weatherfit의 위치 이용, 기기 내 저장 정보와 삭제 방법을 설명하는 개인정보 처리방침입니다.">
+  <title>Weatherfit 개인정보 처리방침</title>
+  <style>
+    :root { color-scheme:light; --ink:#172d42; --muted:#526577; --blue:#1762be; --line:#dae4ed; --soft:#f2f7fc; }
+    * { box-sizing:border-box; }
+    html { font-size:16px; }
+    body { margin:0; color:var(--ink); background:#f8fafc; font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR",sans-serif; line-height:1.8; word-break:keep-all; overflow-wrap:anywhere; }
+    a { color:var(--blue); text-underline-offset:.2em; }
+    a:focus-visible { outline:3px solid var(--blue); outline-offset:5px; border-radius:3px; }
+    .skip { position:absolute; top:-100px; left:16px; background:white; padding:10px 16px; z-index:1; }
+    .skip:focus { top:12px; }
+    header,main,footer { width:min(100% - 40px,760px); margin-inline:auto; }
+    header { padding:28px 0 22px; display:flex; justify-content:space-between; align-items:center; gap:16px; }
+    .brand { font-size:1.25rem; font-weight:800; color:var(--ink); text-decoration:none; letter-spacing:-.04em; }
+    .brand span { color:var(--blue); }
+    nav { font-size:.9rem; }
+    main { padding:32px 36px; background:white; border:1px solid var(--line); border-radius:20px; }
+    .eyebrow { margin:0 0 10px; color:var(--muted); font-size:.85rem; font-weight:600; }
+    h1 { margin:0 0 18px; font-size:clamp(1.8rem,6vw,2.4rem); line-height:1.35; letter-spacing:-.045em; }
+    h2 { margin:34px 0 12px; font-size:1.2rem; line-height:1.5; letter-spacing:-.025em; }
+    h3 { margin:22px 0 8px; font-size:1rem; }
+    p { margin:0 0 16px; }
+    .muted { color:var(--muted); font-size:.94rem; }
+    .draft { padding:18px 20px; background:#fff8e7; border:1px solid #ead6a4; border-radius:12px; margin:22px 0; }
+    .draft p:last-child { margin-bottom:0; }
+    .facts { margin:18px 0; }
+    .facts > div { padding:20px 0; border-bottom:1px solid var(--line); }
+    .facts > div:first-child { border-top:1px solid var(--line); }
+    dt { font-weight:700; margin-bottom:8px; }
+    dd { margin:0; }
+    dd p:last-child { margin-bottom:0; }
+    ul,ol { padding-left:1.4em; margin:12px 0 18px; }
+    li + li { margin-top:8px; }
+    .contact { padding:20px; background:var(--soft); border-radius:12px; }
+    footer { padding:24px 0 36px; color:var(--muted); font-size:.85rem; }
+    footer p { margin:0 0 6px; }
+    @media(max-width:480px) { header,main,footer { width:calc(100% - 28px); } header { padding:22px 0 18px; } main { padding:26px 20px; border-radius:16px; } .draft { padding:16px; } }
+    @media print { body { background:white; } main { border:0; padding:0; } header,main,footer { width:100%; } .skip { display:none; } h2,h3 { break-after:avoid; } }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">본문으로 이동</a>
+  <header>
+    <a class="brand" href="index.html">Weather<span>fit</span></a>
+    <nav aria-label="문서 메뉴"><a href="index.html">문의 및 도움말</a></nav>
+  </header>
+  <main id="main">
+    <p class="eyebrow">시행일 2026년 11월 6일</p>
+    <h1>Weatherfit 개인정보 처리방침</h1>
+    <p>Weatherfit은 현재 위치의 날씨와 사용자가 정한 취향을 바탕으로 옷차림을 추천하는 iPhone 앱입니다. 이 안내는 출시용 앱에서 위치를 사용하는 방법, 기기에 저장하는 정보와 삭제 방법을 설명합니다.</p>
+
+    <section aria-labelledby="data-heading">
+      <h2 id="data-heading">1. 사용하는 정보와 목적</h2>
+      <dl class="facts">
+        <div>
+          <dt>현재 위치</dt>
+          <dd>
+            <p>위치 접근을 허용하면 앱에서 날씨를 불러올 때 현재 위치의 위도·경도를 확인합니다. 해당 지역의 예보와 지역 이름을 얻기 위해 Apple의 날씨 서비스인 WeatherKit과 위치 서비스에 전달합니다.</p>
+            <p>앱은 사용 중 위치 접근을 요청하며, 이동 경로를 지속적으로 기록하거나 백그라운드에서 위치를 추적하는 기능은 사용하지 않습니다. 최근 추천 기록과 위젯에는 지역 이름을 저장합니다. 별도로 미리 본 코디를 같은 지역에서 유지하기 위한 코디 계획에는 위도·경도를 기기에 저장하며, 아래에 목적과 정리 기준을 설명합니다.</p>
+          </dd>
+        </div>
+        <div>
+          <dt>추천 취향과 앱 설정</dt>
+          <dd>
+            <p>추위·더위 성향, 외출 시간, 남성복·여성복·공용 의류 선호, 색상과 차림 취향, 덜 보고 싶은 옷, 실내 활동·냉방 관련 선택, 목선이 열린 옷에 대한 선호를 기기에 저장합니다. 앱 아이콘 선택과 계절 자동 변경 설정, 초기 설정 완료 여부도 저장합니다.</p>
+            <p>다음 실행에도 설정을 유지하고 추천을 개인의 선택에 맞추기 위해 사용합니다. 설정은 변경하거나 앱을 삭제할 때까지 보관합니다.</p>
+          </dd>
+        </div>
+        <div>
+          <dt>지역 이름과 최근 추천 기록</dt>
+          <dd>
+            <p>추천 날짜·시각, 지역 이름, 추천 의류의 종류·색상과 식별 정보, 날씨 요약·수치, 추천 이유를 기기에 저장합니다. 같은 옷차림이 반복되는 것을 줄이기 위해 사용합니다.</p>
+            <p>최근 기록은 <strong>최대 21건</strong> 보관합니다. 같은 날짜·같은 지역의 기록은 새 추천으로 갱신하며, 새 기록이 쌓여 21건을 넘으면 오래된 기록부터 삭제합니다. 21일이 지나면 삭제되는 방식은 아닙니다.</p>
+          </dd>
+        </div>
+        <div>
+          <dt>미리 본 코디와 오늘만 바꾼 옷</dt>
+          <dd>
+            <p>날짜, 예보를 조회한 위치의 위도·경도, 추천 설정, 날씨 판단에 사용한 수치, 의류 번호와 색상, 저장 시각을 기기에 저장합니다. 같은 날짜·가까운 지역에서 다시 열었을 때 코디를 유지하고, 날씨나 설정이 달라지면 추천을 다시 판단하기 위해 사용합니다. 사용자의 착용 사진을 저장하는 기능은 아닙니다.</p>
+            <p>계획은 <strong>최대 21건</strong>을 저장합니다. 조회할 때 오늘부터 14일 뒤까지의 계획 중 마지막 저장 후 14일 미만인 계획만 사용합니다. 지난 날짜나 이 기준을 벗어난 계획은 사용 대상에서 제외하고, 다음 코디 계획을 저장할 때 저장 목록에서도 제거합니다. 앱을 사용하지 않는 동안에는 기기에 남아 있을 수 있습니다.</p>
+          </dd>
+        </div>
+        <div>
+          <dt>위젯에 표시할 최신 추천</dt>
+          <dd>
+            <p>날씨를 불러온 시각, 지역 이름, 날씨 요약·수치, 추천 의류와 설명, 날씨 출처와 앱의 의류 에셋으로 합성한 코디 이미지를 기기에 저장하고 앱과 위젯이 함께 사용합니다. 사용자가 촬영한 사진은 아니며, 새로운 추천을 저장하면 최신 정보로 교체합니다.</p>
+            <p>오래된 날씨를 현재 정보처럼 보여주지 않도록 8시간이 지나거나 날짜가 바뀌면 새로 확인하라는 안내를 표시합니다. 이 표시 기준은 저장 정보의 자동 삭제 시점과는 다릅니다. 날씨 출처의 링크와 표기도 기기에 저장할 수 있습니다.</p>
+          </dd>
+        </div>
+        <div>
+          <dt>날씨 연결 진단 기록</dt>
+          <dd>
+            <p>날씨 연결 문제를 확인하기 위해 조회 시각, 진행 단계와 결과, 요청한 날짜의 차이와 외출 시간, 받은 예보의 개수, 오류 종류와 번호를 기기에 기록합니다. 정확한 위치 좌표, 지역 이름, 인증 값, 요청 주소와 오류 상세 본문은 이 진단 항목에 포함하지 않습니다.</p>
+            <p>앱이 작성하는 진단 파일에는 최근 이벤트를 <strong>최대 32개</strong> 보관합니다. 새로운 전체 날씨 조회를 시작하면 기록 목록을 다시 시작합니다. 같은 이벤트가 기기의 시스템 로그에도 남으며, 시스템 로그의 보관 기간은 iOS가 관리합니다. 개발자 서버로 자동 전송하거나 문의 메일에 자동 첨부하지 않습니다.</p>
+          </dd>
+        </div>
+        <div>
+          <dt>사용자가 보내는 문의 메일</dt>
+          <dd>
+            <p>이메일로 문의하면 발신 이메일 주소, 문의 내용과 사용자가 선택해 첨부한 파일을 운영자가 받아 문의 확인과 답변에 사용합니다. 앱이 위치·설정·추천 기록이나 진단 파일을 문의 메일에 자동으로 첨부하지 않습니다.</p>
+            <p>문의 메일은 <strong>답변 완료 후 30일 이내</strong>에 운영자가 메일함과 휴지통에서 삭제합니다. 문의에 필요하지 않은 개인정보는 보내지 말아 주세요.</p>
+          </dd>
+        </div>
+      </dl>
+    </section>
+
+    <section aria-labelledby="sharing-heading">
+      <h2 id="sharing-heading">2. 외부 서비스와 정보 전달</h2>
+      <p>앱에 저장한 추천 취향, 최근 추천 기록과 코디 계획을 Weatherfit 개발자 서버로 전송하지 않습니다. 회원 계정, 광고 식별자, 광고 SDK 또는 이용자 행동 분석·추적 서비스를 사용하지 않습니다.</p>
+      <h3>Apple의 날씨 및 위치 서비스</h3>
+      <p>출시용 앱의 날씨 제공자는 Apple입니다. Apple은 WeatherKit의 위치 정보를 날씨 제공에 사용하며 개인 식별 정보와 연결하거나 요청 사이에 위치를 추적하지 않는다고 안내합니다. 자세한 내용은 <a href="https://developer.apple.com/weatherkit/">Apple WeatherKit 안내</a>와 <a href="https://www.apple.com/legal/privacy/">Apple 개인정보 보호정책</a>을 확인해 주세요.</p>
+      <h3>문의 이메일</h3>
+      <p>문의 주소는 네이버 메일을 사용합니다. 메일을 보내면 선택한 메일 서비스와 네이버 메일을 통해 문의가 전달됩니다. 이메일 서비스의 정보 처리는 해당 제공자의 정책에 따릅니다. <a href="https://policy.naver.com/policy/privacy.html">네이버 개인정보 처리방침</a>을 확인할 수 있습니다.</p>
+      <h3>착용 예시와 날씨 웹사이트</h3>
+      <p>사용자가 아이템의 Pinterest 또는 Google 이미지 링크를 누르면 선택한 옷의 색상과 종류를 검색어로 전달합니다. 이 검색 주소에 현재 위치, 날씨 수치나 저장한 추천 기록은 넣지 않습니다. 검색 결과를 앱이 수집하거나 기기에 검색 이력으로 저장하지 않습니다.</p>
+      <p>외부 페이지를 연 뒤에는 해당 서비스의 개인정보 처리방침이 적용됩니다. <a href="https://policy.pinterest.com/ko/privacy-policy">Pinterest 개인정보 처리방침</a>과 <a href="https://policies.google.com/privacy?hl=ko">Google 개인정보처리방침</a>에서 확인할 수 있습니다. 날씨 상세에서 외부 날씨 웹사이트를 여는 경우에도 해당 서비스의 정책이 적용됩니다.</p>
+      <h3>공개 웹사이트</h3>
+      <p>앱 소개·고객지원·개인정보 처리방침 웹페이지는 GitHub Pages로 제공합니다. GitHub는 사이트 방문자의 IP 주소를 보안 목적으로 기록·보관한다고 안내합니다. 이 호스팅 처리는 앱 기기에만 저장하는 코디·위치 데이터와 별개이며, GitHub의 정책에 따라 관리됩니다. 자세한 내용은 <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages">GitHub Pages 안내</a>와 <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub 개인정보 보호정책</a>을 확인해 주세요.</p>
+      <p>Weatherfit 소개·지원·개인정보 페이지에 운영자가 별도로 설치한 광고·방문자 분석 도구나 문의 입력 폼은 없습니다. 문의는 사용자가 직접 이메일로 보냅니다.</p>
+    </section>
+
+    <section aria-labelledby="control-heading">
+      <h2 id="control-heading">3. 설정 변경과 정보 삭제</h2>
+      <ul>
+        <li><strong>위치 권한 변경:</strong> iPhone 설정 → 개인정보 보호 및 보안 → 위치 서비스 → Weatherfit에서 위치 접근을 변경하거나 ‘안 함’을 선택할 수 있습니다. 권한을 끄면 현재 위치의 날씨를 새로 불러올 수 없습니다. 이미 저장한 지역 이름과 추천 기록이 권한 변경만으로 삭제되지는 않습니다.</li>
+        <li><strong>추천 취향 변경:</strong> 앱의 설정 화면에서 선택을 바꿀 수 있습니다.</li>
+        <li><strong>기기 내 정보 삭제:</strong> iPhone 설정 → 일반 → iPhone 저장 공간 → Weatherfit → 앱 삭제를 선택해 주세요. ‘앱 정리하기’는 저장된 데이터를 남깁니다. 현재 앱에는 전체 기록을 지우는 별도의 버튼이 없습니다.</li>
+        <li><strong>처음 설정 다시 보기:</strong> 초기 선택 화면을 다시 여는 기능이며 저장된 기록을 지우지 않습니다. 위치 권한을 끄거나 위젯 표시가 만료되어도 기존 데이터가 자동으로 모두 삭제되지는 않습니다. 기기 백업, iOS 시스템 로그와 이미 보낸 메일은 각 서비스에서 별도로 관리됩니다.</li>
+        <li><strong>문의 정보 관련 요청:</strong> 보낸 문의 내용의 확인·정정·삭제 등 개인정보 관련 요청은 아래 이메일로 보내 주세요. 운영자가 해당 문의를 확인한 뒤 요청 내용과 처리 결과를 답변합니다. 기기에만 저장한 설정과 추천 기록은 운영자가 원격으로 열람하거나 삭제할 수 없습니다.</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="contact-heading">
+      <h2 id="contact-heading">4. 개인정보 관련 문의</h2>
+      <p class="contact">Weatherfit 운영자·개인정보 문의 담당자: 양창우<br><a href="mailto:ycw012@naver.com?subject=Weatherfit%20%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4%20%EB%AC%B8%EC%9D%98">ycw012@naver.com</a></p>
+    </section>
+
+    <section aria-labelledby="date-heading">
+      <h2 id="date-heading">5. 시행일과 변경 안내</h2>
+      <p>이 처리방침은 2026년 11월 6일부터 시행합니다. 정보 처리 방식이 바뀌면 이 페이지의 내용과 시행일을 갱신해 안내합니다.</p>
+    </section>
+  </main>
+  <footer>
+    <p><a href="index.html">문의 및 도움말로 돌아가기</a></p>
+    <p>Weatherfit · 개인정보 처리방침</p>
+  </footer>
+</body>
+</html>
