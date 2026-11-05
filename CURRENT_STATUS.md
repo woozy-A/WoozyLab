@@ -1,13 +1,15 @@
 # WoozyLab 현재 상태 · 2026-11-06
 
-## WeatherFit 추가 · 로컬 검증 완료, 공개 반영 전
+## WeatherFit 추가 · 공개 확인 완료
 
 사용자 요청으로 WeatherFit 한국어 소개·지원·개인정보처리방침과 앱 아이콘을 추가했다. 출시 준비 상태이며 확인되지 않은 App Store 링크와 검토되지 않은 영어 상세는 만들지 않았다. 앱 화면은 별도 선정 전이므로 소개 페이지에서 실제 앱 아이콘을 사용한다. 승인된 원본 문서와 가져오기 근거는 `content/WEATHERFIT_SOURCES.md`, 원문·본문 해시는 `content/document-provenance.json`에 있다.
 
 - 생성 페이지 24개, 앱 JSON 4개 검증. `npm run validate` 회귀 검사 **48/48 통과**.
 - 기존 앱 JSON·지원/정책 본문·공통 CSS·템플릿은 변경하지 않았다. 기존 앱 상세 HTML도 그대로이며 한국어/영어 허브 6개에 WeatherFit 항목만 추가했다.
 - 별도 Chrome에서 새 3개 페이지와 한국어·영어 허브 6개를 390px·1280px로 확인했다. 18조건 모두 가로 넘침·깨진 이미지가 없었고 소개·지원·정책 화면을 직접 검토했다. 지연 로딩 이미지는 decode 완료 후 판정했다.
-- 공개 예정 경로: `/weatherfit/`, `/weatherfit/support/`, `/weatherfit/privacy/`. 이 기록 시점에는 아직 커밋·푸시·공개 배포하지 않았다. 브라우저 확인과 배포 후 HTTP 응답·본문 대조는 별도 기록한다.
+- 공개 경로: `/weatherfit/`, `/weatherfit/support/`, `/weatherfit/privacy/`. 구현 커밋 `1e32af9`를 main에 push했고 GitHub Pages API에서 해당 커밋 `built`를 확인했다.
+- 공개 HTML 24개와 WeatherFit 아이콘, 총 25주소가 모두 HTTP 200이고 로컬 원본 SHA256과 일치했다. 기존 페이지도 함께 확인했다. 검증 기록과 화면은 `/private/tmp/weatherfit-site-20261106-checks/`의 임시 자료다.
+- 이번 사이트 공개는 앱의 App Store 업로드·출시를 뜻하지 않는다. App Store URL, 실제 앱 화면 선정, 영어 상세 검토는 `apps/weatherfit.json`의 TODO로 남았다.
 
 ## 이전 기록 · 2026-10-16
 
