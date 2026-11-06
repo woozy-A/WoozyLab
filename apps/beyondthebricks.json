@@ -1,0 +1,80 @@
+{
+  "$schema": "../schema/app.schema.json",
+  "slug": "beyondthebricks",
+  "name": "BeyondTheBricks",
+  "status": "출시 준비",
+  "platform": "iPad",
+  "tagline": "브릭을 보고, 브릭 속으로.",
+  "summary": "브릭 모델을 3D와 AR로 감상하고, 지원되는 실물 세트를 인식해 작은 세계를 체험하는 iPad 앱입니다.",
+  "appStoreURL": null,
+  "supportEmail": "ycw012@naver.com",
+  "marketingURL": "https://woozy-a.github.io/WoozyLab/beyondthebricks/",
+  "supportURL": "https://woozy-a.github.io/WoozyLab/beyondthebricks/support/",
+  "privacyURL": "https://woozy-a.github.io/WoozyLab/beyondthebricks/privacy/",
+  "permissions": [
+    {
+      "name": "카메라",
+      "purpose": "실물 인식과 AR 배치, AR 사진에는 카메라 권한이 필요합니다.",
+      "required": false
+    },
+    {
+      "name": "사진 추가",
+      "purpose": "사진 저장을 선택하면 사진 추가 권한이 필요할 수 있습니다.",
+      "required": false
+    }
+  ],
+  "privacyFacts": [
+    "BeyondTheBricks는 개인정보를 수집하지 않습니다.",
+    "카메라 영상은 기기 안에서만 처리되며 녹화되거나 전송되지 않습니다.",
+    "어디에도 전송되지 않으며 앱을 삭제하면 함께 지워집니다."
+  ],
+  "features": [
+    {
+      "title": "3D 보기",
+      "description": "Discover Sets에서 브릭 모델을 골라 여러 각도에서 살펴보세요."
+    },
+    {
+      "title": "내 공간에 AR로 띄우기",
+      "description": "카메라로 주변 공간을 비추고 브릭 모델을 배치해 보세요. 카메라 권한과 AR 지원 기기가 필요합니다."
+    },
+    {
+      "title": "브릭 속으로 들어가기",
+      "description": "지원되는 실물 세트를 인식해 포털을 열고 체험하세요. iPadOS 27 이상에서 이용할 수 있으며 세트별 인식 데이터가 필요합니다."
+    }
+  ],
+  "screenshots": [],
+  "accentColor": "#3B4054",
+  "icon": "assets/beyondthebricks-icon.svg",
+  "privacyPolicyUpdatedAt": "2026-11-04",
+  "updatedAt": "2026-11-06",
+  "sourceFiles": [
+    "content/BEYONDTHEBRICKS_SOURCES.md",
+    "content/documents.json",
+    "content/document-provenance.json"
+  ],
+  "todos": [
+    "출시 후 공개 App Store URL 연결",
+    "최종 제출 빌드 스크린샷 추가",
+    "앱 내부 AppLinks와 App Store Connect에 새 지원·개인정보 URL 반영",
+    "iPadOS 18 실기기 실행은 아직 미검증. 웹사이트 검증과 별개로 확인 필요"
+  ],
+  "english": {
+    "status": "Preparing for release",
+    "tagline": "See the bricks. Step inside.",
+    "summary": "Explore brick models in 3D and AR, and enter miniature worlds by recognizing supported physical sets on iPad.",
+    "features": [
+      {
+        "title": "View in 3D",
+        "description": "Choose a brick model in Discover Sets and examine it from different angles."
+      },
+      {
+        "title": "Place models in AR",
+        "description": "Place brick models in your surroundings. Camera permission and an AR-capable device are required."
+      },
+      {
+        "title": "Step inside the bricks",
+        "description": "Recognize a supported physical set and enter its experience through a portal. Requires iPadOS 27 or later and recognition data for the set."
+      }
+    ]
+  }
+}
