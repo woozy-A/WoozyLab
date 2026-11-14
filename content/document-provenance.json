@@ -114,13 +114,13 @@
   {
     "route": "beyondthebricks/support/",
     "source": "BeyondTheBricks@d0341ab docs/privacy-policy.md; CreditsView.swift; user-confirmed OS and recognition flow, 2026-11-06. App name updated as requested. See content/BEYONDTHEBRICKS_SOURCES.md.",
-    "bodySHA256": "dc5b6a575f84c363d60ef3b92ee9ec83a2fa5cf64ff8efae42ebe59c567306a7",
+    "bodySHA256": "0223ec01bbb4746cd703a84b9bffbb4d0436e2fa50738762ed0b9da1742a6527",
     "importedAt": "2026-11-06"
   },
   {
     "route": "beyondthebricks/privacy/",
     "source": "BeyondTheBricks@d0341ab docs/privacy-policy.md; CreditsView.swift; user-confirmed OS and recognition flow, 2026-11-06. App name updated as requested. See content/BEYONDTHEBRICKS_SOURCES.md.",
-    "bodySHA256": "11933bfbbcc4dd297a3908e2fc8682ab30b16be77f8828c545b83360f8fc3712",
+    "bodySHA256": "399e8599448fe73d007c26de4da460e1149d35971741734e716e2c80cb377be9",
     "importedAt": "2026-11-06",
     "sourceMarkdownFile": "content/sources/beyondthebricks/2026-11-06/privacy-original.md",
     "sourceMarkdownSHA256": "aa18778790847bb52489ce028f8b263cfd5befc525fb98cb52735ebdb103a74a"
@@ -128,13 +128,13 @@
   {
     "route": "en/beyondthebricks/support/",
     "source": "BeyondTheBricks@d0341ab docs/privacy-policy.md; CreditsView.swift; user-confirmed OS and recognition flow, 2026-11-06. App name updated as requested. See content/BEYONDTHEBRICKS_SOURCES.md.",
-    "bodySHA256": "2d314c20df262a182d2a66f948c1efe57f5fc5c1036decd7aa4b88566e3084d7",
+    "bodySHA256": "bb271bd9e815b979723c689b5ce9441e8b2d29ed1c78edcae7ad5b258faf5865",
     "importedAt": "2026-11-06"
   },
   {
     "route": "en/beyondthebricks/privacy/",
     "source": "BeyondTheBricks@d0341ab docs/privacy-policy.md; CreditsView.swift; user-confirmed OS and recognition flow, 2026-11-06. App name updated as requested. See content/BEYONDTHEBRICKS_SOURCES.md.",
-    "bodySHA256": "8305a9559dfdeea6244b2b72150d10e0d0ab475c0587f99ae0f5744f0953fecc",
+    "bodySHA256": "924b4c5f3e9f6cd71ebe47d36d46c6f5cd1579d54575ce6a9ed6da1d529a9b07",
     "importedAt": "2026-11-06",
     "sourceMarkdownFile": "content/sources/beyondthebricks/2026-11-06/privacy-original.md",
     "sourceMarkdownSHA256": "aa18778790847bb52489ce028f8b263cfd5befc525fb98cb52735ebdb103a74a"

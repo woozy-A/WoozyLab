@@ -7,15 +7,16 @@ const englishKeyPic = {
   features: [{title:'Photo review and organization', description:'Review photos with keyboard shortcuts and organize them into folders on your Mac.'}]
 };
 
-export function appCard(app, route, locale, role = '') {
+export function appCard(app, route, locale, role = '', context = '') {
   const english = locale === 'en';
   const koreanTarget = english && !hasEnglishPages(app);
   const copy = english ? (app.english ?? (app.slug === 'keypic' ? englishKeyPic : app)) : app;
   const summary = copy.summary;
   const url = target => e(relativeURL(route, target));
   const status = copy.status;
+  const teamLabel = context === 'home' ? app.teamProject?.label?.[locale] : null;
   const action = role === 'support' ? 'Support' : role === 'privacy' ? 'Privacy Policy' : english ? 'Explore app' : '앱 살펴보기';
-  return `<article class="app-card theme-${app.slug}"><div class="app-card-top"><img class="app-icon" src="${url(app.icon)}" width="88" height="88" alt="${e(app.name)} ${english ? 'app icon' : '앱 아이콘'}"><span class="platform">${e(app.platform)}</span></div><div class="app-card-heading"><h3>${e(app.name)}</h3>${status ? `<span class="status">${e(status)}</span>` : ''}</div><p class="description"${koreanTarget ? ' lang="ko"' : ''}>${e(summary)}</p><a class="card-action" href="${url(appRoute(app, role, locale))}"${koreanTarget ? ' hreflang="ko"' : ''}>${action}${koreanTarget ? ' · 한국어' : ''}<span aria-hidden="true">↗</span></a></article>`;
+  return `<article class="app-card theme-${app.slug}"><div class="app-card-top"><img class="app-icon" src="${url(app.icon)}" width="88" height="88" alt="${e(app.name)} ${english ? 'app icon' : '앱 아이콘'}"><span class="platform">${e(app.platform)}</span></div><div class="app-card-heading"><h3>${e(app.name)}</h3>${status ? `<span class="status">${e(status)}</span>` : ''}${teamLabel ? `<span class="status">${e(teamLabel)}</span>` : ''}</div><p class="description"${koreanTarget ? ' lang="ko"' : ''}>${e(summary)}</p><a class="card-action" href="${url(appRoute(app, role, locale))}"${koreanTarget ? ' hreflang="ko"' : ''}>${action}${koreanTarget ? ' · 한국어' : ''}<span aria-hidden="true">↗</span></a></article>`;
 }
 
 export function homePage(site, apps, route, locale) {
@@ -24,7 +25,7 @@ export function homePage(site, apps, route, locale) {
   const lab = site.webLab;
   const url = target => e(relativeURL(route, target));
   return `<header class="page-heading home-heading"><p class="eyebrow">INDEPENDENT APPS &amp; EXPERIMENTS</p><h1>${copy.title}</h1><p class="intro">${e(copy.intro)}</p></header>
-  <section id="apps" class="catalog-section" aria-labelledby="apps-title"><div class="section-heading section-heading-row"><h2 id="apps-title">Apps</h2><p>${english ? 'Tools for work. Stories for life.' : '일상을 돕는 도구, 일상 밖의 발견.'}</p></div><div class="app-grid">${apps.map(app=>appCard(app, route, locale)).join('')}</div></section>
+  <section id="apps" class="catalog-section" aria-labelledby="apps-title"><div class="section-heading section-heading-row"><h2 id="apps-title">Apps</h2><p>${english ? 'Tools for work. Stories for life.' : '일상을 돕는 도구, 일상 밖의 발견.'}</p></div><div class="app-grid">${apps.map(app=>appCard(app, route, locale, '', 'home')).join('')}</div></section>
   <section id="web-labs" class="web-labs-section" aria-labelledby="web-labs-title"><div class="section-heading section-heading-row"><h2 id="web-labs-title">Web Labs</h2><p>${english ? 'Small experiments. Open right in your browser.' : '설치 없이 바로 써보는 작은 실험.'}</p></div><a class="web-lab-card" href="${e(lab.url)}"><img src="${url(lab.image)}" width="1280" height="720" loading="lazy" alt="${english ? 'Babpick lunch recommendation screen' : '밥픽 웹앱의 점심 추천 화면'}"><div><p class="eyebrow">LUNCH PICKER</p><h3>${e(english ? lab.nameEN : lab.name)}</h3><p>${e(english ? lab.descriptionEN : lab.description)}</p><span class="text-link">${english ? 'Open on the web' : '웹에서 바로 쓰기'} ↗</span></div></a></section>
   <section id="contact" class="contact-section" aria-labelledby="contact-title"><div><p class="eyebrow">LET’S TALK</p><h2 id="contact-title">${english ? 'A question or an idea?' : '궁금한 점이나 아이디어가 있나요?'}</h2><p>${english ? 'For app-specific help, please use the Support page.' : '앱 사용 문의는 Support에서 해당 앱을 선택해 주세요.'}</p></div><a href="mailto:${e(site.contactEmail)}">${e(site.contactEmail)} ↗</a></section>`;
 }
@@ -43,10 +44,18 @@ export function productPage(app, route, locale) {
   const url = target => e(relativeURL(route,target));
   const shots = app.screenshots;
   const visual = shots.length ? `<figure class="product-preview"><img src="${url(shots[0].path)}" width="1260" height="2736" alt="${e(shots[0].alt)}"><figcaption>출시 준비 중인 앱 화면</figcaption></figure>` : `<div class="product-symbol"><img src="${url(app.icon)}" width="240" height="240" alt="${e(app.name)} ${english ? 'app icon' : '앱 아이콘'}"></div>`;
+  const featureHeading = app.slug === 'beyondthebricks'
+    ? (english ? 'An adventure that starts from your finished set.' : '완성한 세트에서 시작하는 탐험.')
+    : english ? 'Made for your everyday workflow.' : app.slug === 'orannamu' ? '오래된 나무를 만나는 세 가지 방법.' : '필요한 순간에, 필요한 만큼.';
+  const teamDescription = app.teamProject?.description?.[locale];
+  const independenceNotice = app.independentFanNotice?.[locale];
+  const productSections = [
+    teamDescription ? `<section class="features-section" aria-labelledby="team-project-title"><div class="section-heading"><h2 id="team-project-title">${english ? 'Meet the team' : '만든 사람들'}</h2></div><p>${e(teamDescription)}</p></section>` : '',
+    shots.length > 1 ? `<section class="story-feature"><figure><img src="${url(shots[1].path)}" width="1260" height="2736" loading="lazy" alt="${e(shots[1].alt)}"></figure><div><p class="eyebrow">WITNESS THE TIME</p><h2>같은 나무 곁에서,<br>다른 시간을 만납니다.</h2><p>나무가 바라본 장소는 어떻게 달라졌을까요? 시대별 장면을 따라가며 오늘의 풍경과 지난 시간을 연결합니다.</p><p class="notice">과거 장면은 편집 재구성 이미지이며 실제 당시 사진이 아닙니다.</p></div></section>` : '',
+    independenceNotice ? `<section class="features-section" aria-labelledby="independent-fan-title"><div class="section-heading"><h2 id="independent-fan-title">${english ? 'Independent fan-made app' : '독립 팬 제작 앱'}</h2></div><p>${e(independenceNotice)}</p></section>` : ''
+  ].filter(Boolean);
   return `<section class="product-hero" aria-labelledby="product-title"><div><div class="product-identity"><img src="${url(app.icon)}" width="64" height="64" alt=""><span>${e(app.name)}<small>${e(app.platform)}${copy.status ? ' · ' + e(copy.status) : ''}</small></span></div><h1 id="product-title">${e(copy.tagline ?? app.name)}</h1><p class="intro">${e(copy.summary)}</p><div class="action-links">${app.appStoreURL ? `<a class="button primary" href="${e(app.appStoreURL)}">App Store ↗</a>` : ''}<a class="button ${app.appStoreURL ? 'secondary' : 'primary'}" href="${url(appRoute(app,'support',locale))}">${english ? 'Support' : '사용·지원 안내'}</a><a class="text-link" href="${url(appRoute(app,'privacy',locale))}">${english ? 'Privacy Policy' : '개인정보 처리방침'} ↗</a></div></div>${visual}</section>
-  <section class="features-section" id="${e(app.slug)}" aria-labelledby="features-title"><div class="section-heading"><p class="eyebrow">INSIDE ${e(app.name).toUpperCase()}</p><h2 id="features-title">${english ? 'Made for your everyday workflow.' : app.slug === 'orannamu' ? '오래된 나무를 만나는 세 가지 방법.' : '필요한 순간에, 필요한 만큼.'}</h2></div><div class="feature-grid">${copy.features.map((f,i)=>`<article class="feature"><span class="feature-number">0${i+1}</span><h3>${e(f.title)}</h3><p>${e(f.description)}</p></article>`).join('')}</div></section>
-  ${shots.length > 1 ? `<section class="story-feature"><figure><img src="${url(shots[1].path)}" width="1260" height="2736" loading="lazy" alt="${e(shots[1].alt)}"></figure><div><p class="eyebrow">WITNESS THE TIME</p><h2>같은 나무 곁에서,<br>다른 시간을 만납니다.</h2><p>나무가 바라본 장소는 어떻게 달라졌을까요? 시대별 장면을 따라가며 오늘의 풍경과 지난 시간을 연결합니다.</p><p class="notice">과거 장면은 편집 재구성 이미지이며 실제 당시 사진이 아닙니다.</p></div></section>` : ''}
-  <section class="product-help" id="support"><h2>${english ? 'Help when you need it.' : '사용 중 궁금한 점이 있다면.'}</h2><div class="action-links"><a href="${url(appRoute(app,'support',locale))}">${e(app.name)} ${english ? 'Support' : '고객지원'} ↗</a><a id="privacy" href="${url(appRoute(app,'privacy',locale))}">${english ? 'Privacy Policy' : '개인정보 처리방침'} ↗</a><a href="mailto:${e(app.supportEmail)}">Contact ↗</a></div></section>`;
+  <section class="features-section" id="${e(app.slug)}" aria-labelledby="features-title"><div class="section-heading"><p class="eyebrow">INSIDE ${e(app.name).toUpperCase()}</p><h2 id="features-title">${e(featureHeading)}</h2></div><div class="feature-grid">${copy.features.map((f,i)=>`<article class="feature"><span class="feature-number">0${i+1}</span><h3>${e(f.title)}</h3><p>${e(f.description)}</p></article>`).join('')}</div></section>${productSections.length ? `\n  ${productSections.join('\n  ')}${shots.length > 1 ? '\n  ' : '\n\n  '}` : '\n\n  '}<section class="product-help" id="support"><h2>${english ? 'Help when you need it.' : '사용 중 궁금한 점이 있다면.'}</h2><div class="action-links"><a href="${url(appRoute(app,'support',locale))}">${e(app.name)} ${english ? 'Support' : '고객지원'} ↗</a><a id="privacy" href="${url(appRoute(app,'privacy',locale))}">${english ? 'Privacy Policy' : '개인정보 처리방침'} ↗</a><a href="mailto:${e(app.supportEmail)}">Contact ↗</a></div></section>`;
 }
 
 export function documentPage(app, doc, role, locale) {

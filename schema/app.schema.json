@@ -169,6 +169,27 @@
           }
         }
       }
+    },
+    "teamProject": {
+      "description": "Optional localized team-project label and attribution for apps built by a team.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "label",
+        "description"
+      ],
+      "properties": {
+        "label": {
+          "$ref": "#/$defs/localizedString"
+        },
+        "description": {
+          "$ref": "#/$defs/localizedString"
+        }
+      }
+    },
+    "independentFanNotice": {
+      "description": "Optional localized fan-project disclaimer used on the product page.",
+      "$ref": "#/$defs/localizedString"
     }
   },
   "$defs": {
@@ -278,6 +299,22 @@
           "pattern": "^assets/(?!\\.\\.?(?:/|$))(?!.*(?:/\\.\\.?)(?:/|$))[^\\s]+\\.(?:png|jpe?g|webp|svg)$"
         },
         "alt": {
+          "$ref": "#/$defs/nonEmptyString"
+        }
+      }
+    },
+    "localizedString": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "ko",
+        "en"
+      ],
+      "properties": {
+        "ko": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "en": {
           "$ref": "#/$defs/nonEmptyString"
         }
       }

@@ -5,7 +5,7 @@
   "status": "출시 준비",
   "platform": "iPad",
   "tagline": "브릭을 보고, 브릭 속으로.",
-  "summary": "브릭 모델을 3D와 AR로 감상하고, 지원되는 실물 세트를 인식해 작은 세계를 체험하는 iPad 앱입니다.",
+  "summary": "완성한 실물 브릭 세트를 iPad로 비추면 포털이 열리고, 그 세트 안으로 들어가 탐험하는 iPad 앱입니다. 팀 ButterCoconut이 함께 만들었습니다.",
   "appStoreURL": null,
   "supportEmail": "ycw012@naver.com",
   "marketingURL": "https://woozy-a.github.io/WoozyLab/beyondthebricks/",
@@ -30,23 +30,23 @@
   ],
   "features": [
     {
+      "title": "브릭 속으로 들어가기",
+      "description": "지원되는 실물 세트를 인식해 포털을 열고 체험하세요. iPadOS 27 이상에서 이용할 수 있으며 세트별 인식 데이터가 필요합니다."
+    },
+    {
       "title": "3D 보기",
       "description": "Discover Sets에서 브릭 모델을 골라 여러 각도에서 살펴보세요."
     },
     {
       "title": "내 공간에 AR로 띄우기",
       "description": "카메라로 주변 공간을 비추고 브릭 모델을 배치해 보세요. 카메라 권한과 AR 지원 기기가 필요합니다."
-    },
-    {
-      "title": "브릭 속으로 들어가기",
-      "description": "지원되는 실물 세트를 인식해 포털을 열고 체험하세요. iPadOS 27 이상에서 이용할 수 있으며 세트별 인식 데이터가 필요합니다."
     }
   ],
   "screenshots": [],
   "accentColor": "#3B4054",
   "icon": "assets/beyondthebricks-icon.svg",
   "privacyPolicyUpdatedAt": "2026-11-04",
-  "updatedAt": "2026-11-06",
+  "updatedAt": "2026-11-14",
   "sourceFiles": [
     "content/BEYONDTHEBRICKS_SOURCES.md",
     "content/documents.json",
@@ -61,8 +61,12 @@
   "english": {
     "status": "Preparing for release",
     "tagline": "See the bricks. Step inside.",
-    "summary": "Explore brick models in 3D and AR, and enter miniature worlds by recognizing supported physical sets on iPad.",
+    "summary": "Point your iPad at a finished physical brick set, open a portal and step inside the set to explore it. Built together by team ButterCoconut.",
     "features": [
+      {
+        "title": "Step inside the bricks",
+        "description": "Recognize a supported physical set and enter its experience through a portal. Requires iPadOS 27 or later and recognition data for the set."
+      },
       {
         "title": "View in 3D",
         "description": "Choose a brick model in Discover Sets and examine it from different angles."
@@ -70,11 +74,21 @@
       {
         "title": "Place models in AR",
         "description": "Place brick models in your surroundings. Camera permission and an AR-capable device are required."
-      },
-      {
-        "title": "Step inside the bricks",
-        "description": "Recognize a supported physical set and enter its experience through a portal. Requires iPadOS 27 or later and recognition data for the set."
       }
     ]
+  },
+  "teamProject": {
+    "label": {
+      "ko": "팀 프로젝트",
+      "en": "Team project"
+    },
+    "description": {
+      "ko": "BeyondTheBricks는 Apple Developer Academy @ POSTECH 2026 Challenge 6에서 팀 ButterCoconut 네 명이 함께 기획하고 개발한 비상업 팬 프로젝트입니다.",
+      "en": "BeyondTheBricks is a non-commercial fan project designed and developed by the four members of team ButterCoconut in Challenge 6 of the 2026 program at the Apple Developer Academy @ POSTECH."
+    }
+  },
+  "independentFanNotice": {
+    "ko": "BeyondTheBricks는 독립 팬 제작 앱이며 LEGO® 공식 제품이 아닙니다. LEGO®는 LEGO Group의 상표이며, LEGO Group은 이 앱을 후원하거나 승인하지 않습니다. NASA 및 세트에 표현된 상표·캐릭터·작품의 권리자와도 제휴하거나 승인을 받은 앱이 아닙니다. 상세 출처와 라이선스는 앱의 크레딧에서 확인할 수 있습니다.",
+    "en": "BeyondTheBricks is an independent fan-made app. It is not an official LEGO® product. LEGO® is a trademark of the LEGO Group of companies, which does not sponsor, authorize or endorse this app. It is not affiliated with or endorsed by NASA. All other trademarks, characters and works the sets portray belong to their respective owners, who do not sponsor, authorize or endorse this app. See the in-app credits for sources and licenses."
   }
 }
